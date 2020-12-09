@@ -275,9 +275,26 @@ rule-providers:
     url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Apple.yaml
     path: ./Rules/Apple
     interval: 86400
+  Special:
+    type: http
+    behavior: classical
+    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Special.yaml
+    path: ./Rules/Special
+    interval: 86400
 
 rules:
 - RULE-SET,Spam,Spam
+- DOMAIN-SUFFIX,dmhy.org,PT
+- DOMAIN-SUFFIX,m-team.cc,PT
+- DOMAIN-SUFFIX,hdchina.org,PT
+- DOMAIN-SUFFIX,chdbits.co,PT
+- DOMAIN-SUFFIX,totheglory.im,PT
+- DOMAIN-SUFFIX,hdsky.me,PT
+- DOMAIN-SUFFIX,springsunday.net,PT
+- DOMAIN-SUFFIX,open.cd,PT
+- DOMAIN-SUFFIX,keepfrds.com,PT
+- DOMAIN-SUFFIX,ourbits.club,PT
+- RULE-SET,Special,Special
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
 - RULE-SET,YouTube,YouTube
@@ -320,16 +337,6 @@ rules:
 - RULE-SET,Microsoft,Microsoft
 - RULE-SET,TopBlocked,TopBlocked
 - RULE-SET,Apple,Apple
-- DOMAIN-SUFFIX,dmhy.org,Proxy
-- DOMAIN-SUFFIX,m-team.cc,Proxy
-- DOMAIN-SUFFIX,hdchina.org,Proxy
-- DOMAIN-SUFFIX,chdbits.co,Proxy
-- DOMAIN-SUFFIX,totheglory.im,Proxy
-- DOMAIN-SUFFIX,hdsky.me,Proxy
-- DOMAIN-SUFFIX,springsunday.net,Proxy
-- DOMAIN-SUFFIX,open.cd,Proxy
-- DOMAIN-SUFFIX,keepfrds.com,Proxy
-- DOMAIN-SUFFIX,ourbits.club,Proxy
 - RULE-SET,Domestic,Domestic
 - DOMAIN-SUFFIX,local,DIRECT
 - IP-CIDR,127.0.0.0/8,DIRECT
@@ -365,6 +372,17 @@ enhanced-mode-by-rule = false
 
 [Rule]
 RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Reject.list,Spam
+DOMAIN-SUFFIX,dmhy.org,PT
+DOMAIN-SUFFIX,m-team.cc,PT
+DOMAIN-SUFFIX,hdchina.org,PT
+DOMAIN-SUFFIX,chdbits.co,PT
+DOMAIN-SUFFIX,totheglory.im,PT
+DOMAIN-SUFFIX,hdsky.me,PT
+DOMAIN-SUFFIX,springsunday.net,PT
+DOMAIN-SUFFIX,open.cd,PT
+DOMAIN-SUFFIX,keepfrds.com,PT
+DOMAIN-SUFFIX,ourbits.club,PT
+RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Special.list,Special
 RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Netflix.list,Netflix
 RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Spotify.list,Spotify
 RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/YouTube%20Music.list,YouTube
@@ -409,16 +427,6 @@ RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/PayPa
 RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Microsoft.list,Microsoft
 RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Proxy.list,TopBlocked
 RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Apple.list,Apple
-DOMAIN-SUFFIX,dmhy.org,Proxy
-DOMAIN-SUFFIX,m-team.cc,Proxy
-DOMAIN-SUFFIX,hdchina.org,Proxy
-DOMAIN-SUFFIX,chdbits.co,Proxy
-DOMAIN-SUFFIX,totheglory.im,Proxy
-DOMAIN-SUFFIX,hdsky.me,Proxy
-DOMAIN-SUFFIX,springsunday.net,Proxy
-DOMAIN-SUFFIX,open.cd,Proxy
-DOMAIN-SUFFIX,keepfrds.com,Proxy
-DOMAIN-SUFFIX,ourbits.club,Proxy
 RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Domestic.list,Domestic
 RULE-SET,SYSTEM,Domestic
 RULE-SET,LAN,DIRECT
