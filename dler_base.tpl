@@ -281,6 +281,12 @@ rule-providers:
     url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Special.yaml
     path: ./Rules/Special
     interval: 86400
+  LAN:
+    type: http
+    behavior: classical
+    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/LAN.yaml
+    path: ./Rules/LAN
+    interval: 86400
 
 rules:
 - RULE-SET,Spam,Spam
@@ -294,14 +300,6 @@ rules:
 - DOMAIN-SUFFIX,open.cd,PT
 - DOMAIN-SUFFIX,keepfrds.com,PT
 - DOMAIN-SUFFIX,ourbits.club,PT
-- DOMAIN-SUFFIX,local,DIRECT
-- IP-CIDR,127.0.0.0/8,DIRECT
-- IP-CIDR,172.16.0.0/12,DIRECT
-- IP-CIDR,192.168.0.0/16,DIRECT
-- IP-CIDR,10.0.0.0/8,DIRECT
-- IP-CIDR,17.0.0.0/8,DIRECT
-- IP-CIDR,100.64.0.0/10,DIRECT
-- IP-CIDR6,fe80::/10,DIRECT
 - RULE-SET,Special,Special
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
@@ -347,6 +345,7 @@ rules:
 - RULE-SET,Apple,Apple
 - PROCESS-NAME,uedit64.exe,REJECT
 - RULE-SET,Domestic,Domestic
+- RULE-SET,LAN,DIRECT
 - GEOIP,CN,Domestic
 - MATCH,Others
 
