@@ -301,6 +301,7 @@ rules:
 - IP-CIDR,10.0.0.0/8,DIRECT
 - IP-CIDR,17.0.0.0/8,DIRECT
 - IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR6,fe80::/10,DIRECT
 - RULE-SET,Special,Special
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
