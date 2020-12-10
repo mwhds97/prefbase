@@ -345,6 +345,7 @@ rules:
 - RULE-SET,Microsoft,Microsoft
 - RULE-SET,TopBlocked,TopBlocked
 - RULE-SET,Apple,Apple
+- PROCESS-NAME,uedit64.exe,REJECT
 - RULE-SET,Domestic,Domestic
 - GEOIP,CN,Domestic
 - MATCH,Others
