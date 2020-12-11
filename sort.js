@@ -1,6 +1,6 @@
 function compare(node_a, node_b) {
-	int level_a = 0;
-	int level_b = 0;
+	var level_a = 0;
+	var level_b = 0;
 	const info_a = JSON.parse(node_a.ProxyInfo);
 	const info_b = JSON.parse(node_b.ProxyInfo);
 	if(info_a.Remark.toLowerCase().includes("iepl+")) {
