@@ -14,277 +14,277 @@ rule-providers:
   Spam:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Reject.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Reject.yaml
     path: ./Rules/Spam
     interval: 86400
   Netflix:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Netflix.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Netflix.yaml
     path: ./Rules/Media/Netflix
     interval: 86400
   Spotify:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Spotify.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Spotify.yaml
     path: ./Rules/Media/Spotify
     interval: 86400
   YouTube:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/YouTube.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/YouTube.yaml
     path: ./Rules/Media/YouTube
     interval: 86400
   Bilibili:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Bilibili.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Bilibili.yaml
     path: ./Rules/Media/Bilibili
     interval: 86400
   iQiyi:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/iQiyi.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/iQiyi.yaml
     path: ./Rules/Media/iQiyi
     interval: 86400
   Letv:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Letv.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Letv.yaml
     path: ./Rules/Media/Letv
     interval: 86400
   Netease Music:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Netease%20Music.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Netease%20Music.yaml
     path: ./Rules/Media/Netease_Music
     interval: 86400
   Tencent Video:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Tencent%20Video.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Tencent%20Video.yaml
     path: ./Rules/Media/Tencent_Video
     interval: 86400
   Youku:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Youku.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Youku.yaml
     path: ./Rules/Media/Youku
     interval: 86400
   ABC:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/ABC.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/ABC.yaml
     path: ./Rules/Media/ABC
     interval: 86400
   Abema TV:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Abema%20TV.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Abema%20TV.yaml
     path: ./Rules/Media/Abema_TV
     interval: 86400
   Amazon:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Amazon.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Amazon.yaml
     path: ./Rules/Media/Amazon
     interval: 86400
   Apple News:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Apple%20News.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Apple%20News.yaml
     path: ./Rules/Media/Apple_News
     interval: 86400
   Apple TV:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Apple%20TV.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Apple%20TV.yaml
     path: ./Rules/Media/Apple_TV
     interval: 86400
   Bahamut:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Bahamut.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Bahamut.yaml
     path: ./Rules/Media/Bahamut
     interval: 86400
   BBC iPlayer:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/BBC%20iPlayer.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/BBC%20iPlayer.yaml
     path: ./Rules/Media/BBC_iPlayer
     interval: 86400
   DAZN:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/DAZN.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/DAZN.yaml
     path: ./Rules/Media/DAZN
     interval: 86400
   Disney Plus:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Disney%20Plus.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Disney%20Plus.yaml
     path: ./Rules/Media/Disney_Plus
     interval: 86400
   encoreTVB:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/encoreTVB.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/encoreTVB.yaml
     path: ./Rules/Media/encoreTVB
     interval: 86400
   Fox Now:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Fox%20Now.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Fox%20Now.yaml
     path: ./Rules/Media/Fox_Now
     interval: 86400
   Fox+:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Fox%2B.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Fox%2B.yaml
     path: ./Rules/Media/Fox+
     interval: 86400
   HBO:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/HBO.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/HBO.yaml
     path: ./Rules/Media/HBO
     interval: 86400
   Hulu Japan:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Hulu%20Japan.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Hulu%20Japan.yaml
     path: ./Rules/Media/Hulu_Japan
     interval: 86400
   Hulu:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Hulu.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Hulu.yaml
     path: ./Rules/Media/Hulu
     interval: 86400
   Japonx:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Japonx.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Japonx.yaml
     path: ./Rules/Media/Japonx
     interval: 86400
   JOOX:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/JOOX.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/JOOX.yaml
     path: ./Rules/Media/JOOX
     interval: 86400
   KKBOX:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/KKBOX.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/KKBOX.yaml
     path: ./Rules/Media/KKBOX
     interval: 86400
   KKTV:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/KKTV.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/KKTV.yaml
     path: ./Rules/Media/KKTV
     interval: 86400
   Line TV:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Line%20TV.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Line%20TV.yaml
     path: ./Rules/Media/Line_TV
     interval: 86400
   myTV SUPER:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/myTV%20SUPER.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/myTV%20SUPER.yaml
     path: ./Rules/Media/myTV_SUPER
     interval: 86400
   Pandora:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Pandora.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Pandora.yaml
     path: ./Rules/Media/Pandora
     interval: 86400
   PBS:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/PBS.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/PBS.yaml
     path: ./Rules/Media/PBS
     interval: 86400
   Pornhub:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Pornhub.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Pornhub.yaml
     path: ./Rules/Media/Pornhub
     interval: 86400
   Soundcloud:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Soundcloud.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Soundcloud.yaml
     path: ./Rules/Media/Soundcloud
     interval: 86400
   ViuTV:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/ViuTV.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/ViuTV.yaml
     path: ./Rules/Media/ViuTV
     interval: 86400
   Telegram:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Telegram.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Telegram.yaml
     path: ./Rules/Telegram
     interval: 86400
   Steam:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Steam.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Steam.yaml
     path: ./Rules/Steam
     interval: 86400
   Speedtest:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Speedtest.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Speedtest.yaml
     path: ./Rules/Speedtest
     interval: 86400
   PayPal:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/PayPal.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/PayPal.yaml
     path: ./Rules/PayPal
     interval: 86400
   Microsoft:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Microsoft.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Microsoft.yaml
     path: ./Rules/Microsoft
     interval: 86400
   TopBlocked:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Proxy.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Proxy.yaml
     path: ./Rules/TopBlocked
     interval: 86400
   Domestic:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Domestic.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Domestic.yaml
     path: ./Rules/Domestic
     interval: 86400
   Apple:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Apple.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Apple.yaml
     path: ./Rules/Apple
     interval: 86400
   Special:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Special.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Special.yaml
     path: ./Rules/Special
     interval: 86400
   LAN:
     type: http
     behavior: classical
-    url: https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/LAN.yaml
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/LAN.yaml
     path: ./Rules/LAN
     interval: 86400
 
@@ -372,7 +372,7 @@ enhanced-mode-by-rule = false
 [Proxy Group]
 
 [Rule]
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Reject.list,Spam
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Reject.list,Spam
 DOMAIN-SUFFIX,dmhy.org,PT
 DOMAIN-SUFFIX,m-team.cc,PT
 DOMAIN-SUFFIX,hdchina.org,PT
@@ -383,53 +383,52 @@ DOMAIN-SUFFIX,springsunday.net,PT
 DOMAIN-SUFFIX,open.cd,PT
 DOMAIN-SUFFIX,keepfrds.com,PT
 DOMAIN-SUFFIX,ourbits.club,PT
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Special.list,Special
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Netflix.list,Netflix
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Spotify.list,Spotify
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/YouTube%20Music.list,YouTube
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/YouTube.list,YouTube
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Bilibili.list,DomesticTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/iQiyi.list,DomesticTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Letv.list,DomesticTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/MOO.list,DomesticTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Netease%20Music.list,DomesticTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Tencent%20Video.list,DomesticTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Youku.list,DomesticTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/ABC.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Abema%20TV.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Amazon.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Apple%20News.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Apple%20TV.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Bahamut.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/BBC%20iPlayer.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/DAZN.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Disney%20Plus.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/encoreTVB.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Fox%20Now.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Fox%2B.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/HBO.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Hulu%20Japan.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Hulu.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Japonx.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/JOOX.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/KKBOX.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/KKTV.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Line%20TV.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/myTV%20SUPER.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Pandora.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/PBS.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Pornhub.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Soundcloud.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/ViuTV.list,GlobalTV
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Telegram.list,Telegram
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Steam.list,Steam
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Speedtest.list,Speedtest
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/PayPal.list,PayPal
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Microsoft.list,Microsoft
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Proxy.list,TopBlocked
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Apple.list,Apple
-RULE-SET,https://gitee.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Domestic.list,Domestic
-RULE-SET,SYSTEM,Domestic
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Special.list,Special
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Netflix.list,Netflix
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Spotify.list,Spotify
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/YouTube%20Music.list,YouTube
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/YouTube.list,YouTube
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Bilibili.list,DomesticTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/iQiyi.list,DomesticTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Letv.list,DomesticTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/MOO.list,DomesticTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Netease%20Music.list,DomesticTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Tencent%20Video.list,DomesticTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Youku.list,DomesticTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/ABC.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Abema%20TV.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Amazon.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Apple%20News.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Apple%20TV.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Bahamut.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/BBC%20iPlayer.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/DAZN.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Disney%20Plus.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/encoreTVB.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Fox%20Now.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Fox%2B.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/HBO.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Hulu%20Japan.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Hulu.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Japonx.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/JOOX.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/KKBOX.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/KKTV.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Line%20TV.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/myTV%20SUPER.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Pandora.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/PBS.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Pornhub.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Soundcloud.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/ViuTV.list,GlobalTV
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Telegram.list,Telegram
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Steam.list,Steam
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Speedtest.list,Speedtest
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/PayPal.list,PayPal
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Microsoft.list,Microsoft
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Proxy.list,TopBlocked
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Apple.list,Apple
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Domestic.list,Domestic
 RULE-SET,LAN,DIRECT
 GEOIP,CN,Domestic
 FINAL,Others,dns-failed
