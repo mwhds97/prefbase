@@ -275,10 +275,22 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Apple.yaml
     path: ./Rules/Apple
     interval: 86400
+  PTtracker:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PTtracker.yaml
+    path: ./Rules/PTtracker
+    interval: 86400
+  PTsite:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PTsite.yaml
+    path: ./Rules/PTsite
+    interval: 86400
   Special:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Special.yaml
+    url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Special.yaml
     path: ./Rules/Special
     interval: 86400
   LAN:
@@ -290,17 +302,9 @@ rule-providers:
 
 rules:
 - RULE-SET,Spam,Spam
-- DOMAIN-SUFFIX,dmhy.org,PT
-- DOMAIN-SUFFIX,m-team.cc,PT
-- DOMAIN-SUFFIX,hdchina.org,PT
-- DOMAIN-SUFFIX,chdbits.co,PT
-- DOMAIN-SUFFIX,totheglory.im,PT
-- DOMAIN-SUFFIX,hdsky.me,PT
-- DOMAIN-SUFFIX,springsunday.net,PT
-- DOMAIN-SUFFIX,open.cd,PT
-- DOMAIN-SUFFIX,keepfrds.com,PT
-- DOMAIN-SUFFIX,ourbits.club,PT
 - RULE-SET,Special,Special
+- RULE-SET,PTtracker,PTtracker
+- RULE-SET,PTsite,PTsite
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
 - RULE-SET,YouTube,YouTube
@@ -373,17 +377,9 @@ enhanced-mode-by-rule = false
 
 [Rule]
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Reject.list,Spam
-DOMAIN-SUFFIX,dmhy.org,PT
-DOMAIN-SUFFIX,m-team.cc,PT
-DOMAIN-SUFFIX,hdchina.org,PT
-DOMAIN-SUFFIX,chdbits.co,PT
-DOMAIN-SUFFIX,totheglory.im,PT
-DOMAIN-SUFFIX,hdsky.me,PT
-DOMAIN-SUFFIX,springsunday.net,PT
-DOMAIN-SUFFIX,open.cd,PT
-DOMAIN-SUFFIX,keepfrds.com,PT
-DOMAIN-SUFFIX,ourbits.club,PT
-RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Special.list,Special
+RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Special.list,Special
+RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/PTtracker.list,PTtracker
+RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/PTsite.list,PTsite
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Netflix.list,Netflix
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Spotify.list,Spotify
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/YouTube%20Music.list,YouTube
