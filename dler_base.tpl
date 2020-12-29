@@ -287,6 +287,12 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PTsite.yaml
     path: ./Rules/PTsite
     interval: 86400
+  Downloader:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Downloader.yaml
+    path: ./Rules/Downloader
+    interval: 86400
   Special:
     type: http
     behavior: classical
@@ -351,6 +357,7 @@ rules:
 - RULE-SET,Domestic,Domestic
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,Domestic
+- RULE-SET,Downloader,Downloader
 - MATCH,Others
 
 {% endif %}
@@ -427,6 +434,7 @@ RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Domestic.list,Domestic
 RULE-SET,LAN,DIRECT
 GEOIP,CN,Domestic
+RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Downloader.list,Downloader
 FINAL,Others,dns-failed
 
 [Host]
