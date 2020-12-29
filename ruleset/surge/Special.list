@@ -63,17 +63,5 @@ DOMAIN-SUFFIX,windowsupdate.com
 USER-AGENT,%E8%BF%85%E9%9B%B7
 DOMAIN-SUFFIX,xunlei.com
 
-# > Download
-PROCESS-NAME,aria2c
-PROCESS-NAME,fdm
-PROCESS-NAME,Folx
-PROCESS-NAME,NetTransport
-# PROCESS-NAME,qbittorrent
-PROCESS-NAME,Thunder
-# PROCESS-NAME,Transmission
-PROCESS-NAME,uTorrent
-PROCESS-NAME,WebTorrent
-PROCESS-NAME,WebTorrent Helper
-
 DOMAIN-SUFFIX,smtp
 URL-REGEX,(Subject|HELO|SMTP)
