@@ -5,7 +5,7 @@ payload:
   - DOMAIN-SUFFIX,chdbits.co
   - DOMAIN-SUFFIX,tracker.totheglory.im
   - DOMAIN-SUFFIX,tracker.hdsky.me
-  # - DOMAIN-SUFFIX,springsunday.net
+  - DOMAIN-SUFFIX,on.springsunday.net
   - DOMAIN-SUFFIX,tracker.open.cd
   # - DOMAIN-SUFFIX,keepfrds.com
   # - DOMAIN-SUFFIX,ourbits.club
