@@ -7,5 +7,5 @@ payload:
   - DOMAIN-SUFFIX,tracker.hdsky.me
   - DOMAIN-SUFFIX,on.springsunday.net
   - DOMAIN-SUFFIX,tracker.open.cd
-  # - DOMAIN-SUFFIX,keepfrds.com
-  # - DOMAIN-SUFFIX,ourbits.club
+  - DOMAIN-SUFFIX,tracker.keepfrds.com
+  - DOMAIN-SUFFIX,ourbits.club
