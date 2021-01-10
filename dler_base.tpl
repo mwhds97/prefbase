@@ -303,6 +303,12 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PTsite.yaml
     path: ./Rules/PTsite
     interval: 86400
+  Blizzard:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Blizzard.yaml
+    path: ./Rules/Blizzard
+    interval: 86400
   Downloader:
     type: http
     behavior: classical
@@ -366,6 +372,7 @@ rules:
 - RULE-SET,ViuTV,GlobalTV
 - RULE-SET,Telegram,Telegram
 - RULE-SET,Steam,Steam
+- RULE-SET,Blizzard,Blizzard
 - RULE-SET,Speedtest,Speedtest
 - RULE-SET,PayPal,PayPal
 - RULE-SET,Microsoft,Microsoft
@@ -446,6 +453,7 @@ RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/ViuTV.list,GlobalTV
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Telegram.list,Telegram
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Steam.list,Steam
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Blizzard.list,Blizzard
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Speedtest.list,Speedtest
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/PayPal.list,PayPal
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Microsoft.list,Microsoft
