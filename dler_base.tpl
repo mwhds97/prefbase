@@ -401,7 +401,6 @@ always-real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msf
 hijack-dns = 8.8.8.8:53, 8.8.4.4:53
 internet-test-url = http://wifi.vivo.com.cn/generate_204
 proxy-test-url = http://www.gstatic.com/generate_204
-enhanced-mode-by-rule = false
 
 [Proxy]
 
