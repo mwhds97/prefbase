@@ -1,0 +1,6 @@
+#!name=Block iOS Update
+#!desc=阻止系统更新
+
+[Rule]
+DOMAIN-SUFFIX,gdmf.apple.com,REJECT
+DOMAIN-SUFFIX,mesu.apple.com,REJECT
