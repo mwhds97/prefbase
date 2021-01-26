@@ -331,6 +331,7 @@ rule-providers:
 rules:
 - RULE-SET,Spam,Spam
 - RULE-SET,Special,Special
+# - RULE-SET,Downloader,Downloader
 - RULE-SET,PTtracker,PTtracker
 - RULE-SET,PTsite,PTsite
 - RULE-SET,Netflix,Netflix
@@ -382,7 +383,6 @@ rules:
 - RULE-SET,Domestic,Domestic
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,Domestic
-- RULE-SET,Downloader,Downloader
 - MATCH,Others
 
 {% endif %}
@@ -409,6 +409,7 @@ proxy-test-url = http://www.gstatic.com/generate_204
 [Rule]
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Reject.list,Spam
 RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Special.list,Special
+# RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Downloader.list,Downloader
 RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/PTtracker.list,PTtracker
 RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/PTsite.list,PTsite
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Netflix.list,Netflix
@@ -461,7 +462,6 @@ RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Domestic.list,Domestic
 RULE-SET,LAN,DIRECT
 GEOIP,CN,Domestic
-RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Downloader.list,Downloader
 FINAL,Others,dns-failed
 
 [Host]
