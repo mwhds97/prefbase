@@ -29,11 +29,6 @@ DOMAIN-SUFFIX,dl.google.com
 
 # > Microsoft
 DOMAIN-SUFFIX,msftconnecttest.com
-DOMAIN-SUFFIX,windows.com
-DOMAIN-SUFFIX,windows.net
-DOMAIN-SUFFIX,windowsupdate.com
-DOMAIN-SUFFIX,xbox.com
-DOMAIN-SUFFIX,xboxlive.com
 
 # > Mugglepay
 DOMAIN-SUFFIX,invoice.mugglepay.com
@@ -55,8 +50,6 @@ DOMAIN-SUFFIX,tesla-cdn.thron.cn
 PROCESS-NAME,UUBooster
 
 # > Windows
-DOMAIN-SUFFIX,windows.com
-DOMAIN-SUFFIX,windows.net
 DOMAIN-SUFFIX,windowsupdate.com
 
 # > Xunlei
