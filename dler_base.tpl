@@ -17,8 +17,8 @@ proxy-groups: ~
 rule-providers:
   Spam:
     type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Reject.yaml
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-clash.yaml
     path: ./Rules/Spam
     interval: 86400
   Netflix:
@@ -291,6 +291,12 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Apple.yaml
     path: ./Rules/Apple
     interval: 86400
+  Scholar:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Scholar.yaml
+    path: ./Rules/Scholar
+    interval: 86400
   PTtracker:
     type: http
     behavior: classical
@@ -309,11 +315,17 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Blizzard.yaml
     path: ./Rules/Blizzard
     interval: 86400
-  Downloader:
+#  Downloader:
+#    type: http
+#    behavior: classical
+#    url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Downloader.yaml
+#    path: ./Rules/Downloader
+#    interval: 86400
+  Crack:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Downloader.yaml
-    path: ./Rules/Downloader
+    url: https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Crack.yaml
+    path: ./Rules/Crack
     interval: 86400
   Special:
     type: http
@@ -329,9 +341,10 @@ rule-providers:
     interval: 86400
 
 rules:
+- RULE-SET,Crack,Crack
 - RULE-SET,Spam,Spam
 - RULE-SET,Special,Special
-# - RULE-SET,Downloader,Downloader
+#- RULE-SET,Downloader,Downloader
 - RULE-SET,PTtracker,PTtracker
 - RULE-SET,PTsite,PTsite
 - RULE-SET,Netflix,Netflix
@@ -379,11 +392,85 @@ rules:
 - RULE-SET,Microsoft,Microsoft
 - RULE-SET,TopBlocked,TopBlocked
 - RULE-SET,Apple,Apple
-- PROCESS-NAME,uedit64.exe,REJECT
+- RULE-SET,Scholar,Scholar
 - RULE-SET,Domestic,Domestic
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,Domestic
 - MATCH,Others
+
+script:
+  code: |
+    def main(ctx, metadata):
+      port_list = [21, 22, 23, 53, 80, 123, 143, 194, 443, 465, 587, 853, 993, 995, 998, 2052, 2053, 2082, 2083, 2086, 2095, 2096, 5222, 5228, 5229, 5230, 8080, 8443, 8880, 8888, 8889]
+      ruleset_action = {
+        "Crack": "Crack",
+        "Spam": "Spam",
+        "Special": "Special",
+#        "Downloader": "Downloader",
+        "PTtracker": "PTtracker",
+        "PTsite": "PTsite",
+        "Netflix": "Netflix",
+        "Spotify": "Spotify",
+        "YouTube": "YouTube",
+        "Disney Plus": "Disney",
+        "Bilibili": "DomesticTV",
+        "iQiyi": "DomesticTV",
+        "Letv": "DomesticTV",
+        "Netease Music": "DomesticTV",
+        "Tencent Video": "DomesticTV",
+        "Youku": "DomesticTV",
+        "WeTV": "DomesticTV",
+        "ABC": "GlobalTV",
+        "Abema TV": "GlobalTV",
+        "Amazon": "GlobalTV",
+        "Apple News": "GlobalTV",
+        "Apple TV": "GlobalTV",
+        "Bahamut": "GlobalTV",
+        "BBC iPlayer": "GlobalTV",
+        "DAZN": "GlobalTV",
+        "Discovery Plus": "GlobalTV",
+        "encoreTVB": "GlobalTV",
+        "Fox Now": "GlobalTV",
+        "Fox+": "GlobalTV",
+        "HBO": "GlobalTV",
+        "Hulu Japan": "GlobalTV",
+        "Hulu": "GlobalTV",
+        "Japonx": "GlobalTV",
+        "JOOX": "GlobalTV",
+        "KKBOX": "GlobalTV",
+        "KKTV": "GlobalTV",
+        "Line TV": "GlobalTV",
+        "myTV SUPER": "GlobalTV",
+        "Pandora": "GlobalTV",
+        "PBS": "GlobalTV",
+        "Pornhub": "GlobalTV",
+        "Soundcloud": "GlobalTV",
+        "ViuTV": "GlobalTV",
+        "Telegram": "Telegram",
+        "Steam": "Steam",
+        "Blizzard": "Blizzard",
+        "Speedtest": "Speedtest",
+        "PayPal": "PayPal",
+        "Microsoft": "Microsoft",
+        "TopBlocked": "TopBlocked",
+        "Apple": "Apple",
+        "Scholar": "Scholar",
+        "Domestic": "Domestic",
+        "LAN": "DIRECT"
+      }
+      port = int(metadata["dst_port"])
+      if port not in port_list:
+        return "DIRECT"
+      for rule_name in ctx.rule_providers.keys():
+        if ctx.rule_providers[rule_name].match(metadata):
+          return ruleset_action[rule_name]
+      ip = metadata["dst_ip"] or ctx.resolve_ip(metadata["host"])
+      if ip == "":
+        return "DIRECT"
+      code = ctx.geoip(ip)
+      if code == "CN":
+        return "Domestic"
+      return "Others"
 
 {% endif %}
 {% if request.target == "surge" %}
@@ -407,9 +494,10 @@ proxy-test-url = http://www.gstatic.com/generate_204
 [Proxy Group]
 
 [Rule]
-RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Reject.list,Spam
+RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Crack.list,Crack
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-surge2.txt,Spam
 RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Special.list,Special
-# RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Downloader.list,Downloader
+#RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Downloader.list,Downloader
 RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/PTtracker.list,PTtracker
 RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/PTsite.list,PTsite
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Netflix.list,Netflix
@@ -459,6 +547,7 @@ RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Microsoft.list,Microsoft
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Proxy.list,TopBlocked
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Apple.list,Apple
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Scholar.list,Scholar
 RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Domestic.list,Domestic
 RULE-SET,LAN,DIRECT
 GEOIP,CN,Domestic
