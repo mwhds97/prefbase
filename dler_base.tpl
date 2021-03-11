@@ -406,7 +406,7 @@ script:
         "Crack": "Crack",
         "Spam": "Spam",
         "Special": "Special",
-#        "Downloader": "Downloader",
+        #"Downloader": "Downloader",
         "PTtracker": "PTtracker",
         "PTsite": "PTsite",
         "Netflix": "Netflix",
