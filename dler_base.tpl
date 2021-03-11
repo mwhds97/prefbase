@@ -18,7 +18,7 @@ rule-providers:
   Spam:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-clash.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Domain.yaml
     path: ./Rules/Spam
     interval: 86400
   Netflix:
@@ -421,7 +421,7 @@ proxy-test-url = http://www.gstatic.com/generate_204
 
 [Rule]
 RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Crack.list,Crack
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-surge2.txt,Spam
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Advertising/Advertising_Domain.list,Spam
 RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Special.list,Special
 #RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/Downloader.list,Downloader
 RULE-SET,https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/surge/PTtracker.list,PTtracker
