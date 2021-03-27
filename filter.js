@@ -1,11 +1,10 @@
 function filter(node) {
-  const remark = JSON.parse(node.ProxyInfo).Remark.toLowerCase();
-  const proto = JSON.parse(node.ProxyInfo).Type.toLowerCase();
+  const remark = node.Remark.toLowerCase();
+  const proto = node.Type;
   if(remark.includes(" cc") || remark.includes(" iepl") || remark.includes(" aga") || remark.includes(" game")) {
-    return proto == "ss";
+    return proto == 1;
   }
   else {
-    return proto == "trojan";
+    return proto == 4;
   }
 }
-
