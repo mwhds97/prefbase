@@ -10,6 +10,9 @@ RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/script/
 ^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count|v\d\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|.*featured-comment-ad) data="https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/blank/blank_dict.json"
 
 [Script]
+知乎_解锁关键词屏蔽 = type=http-request,requires-body=1,max-size=0,pattern=^https?://api.zhihu.com/feed-root/block,script-path=https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/script/zhihu/zhihu_plus.js
+知乎_回答黑名单增强 = type=http-response,requires-body=1,max-size=0,pattern=^https?://api.zhihu.com/v4/questions,script-path=https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/script/zhihu/zhihu_plus.js
+知乎_获取黑名单 = type=http-response,requires-body=1,max-size=0,pattern=^https?://api.zhihu.com/settings/blocked_users,script-path=https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/script/zhihu/zhihu_plus.js
 知乎_处理用户信息 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/people\/,script-path=https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/script/zhihu/zhihu_plus.js
 知乎_信息流去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/(moments|topstory)(\/|\?)?(recommend|action=|feed_type=)(?!\/people),script-path=https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/script/zhihu/zhihu_plus.js
 知乎_回答列表去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/v4\/questions,script-path=https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/script/zhihu/zhihu_plus.js
