@@ -3,7 +3,7 @@ function compare(node_a, node_b) {
   var level_b = 0;
   const remark_a = node_a.Remark.toLowerCase();
   const remark_b = node_b.Remark.toLowerCase();
-  var levels = {" cc": 6, " iepl": 5, " ctm": 4, " bgp": 3, " aga": 2, " gia": 1};
+  var levels = {" cc": 6, " iepl": 5, " aia": 4, " bgp": 3, " aga": 2, " gia": 1};
   for(level in levels) {
     if(remark_a.includes(level)) {
       level_a = levels[level];

@@ -1,7 +1,7 @@
 function filter(node) {
   const remark = node.Remark.toLowerCase();
   const proto = node.Type;
-  if(remark.includes(" cc") || remark.includes(" iepl") || remark.includes(" aga") || remark.includes(" game")) {
+  if(/ (cc|iepl|aia|aga|gamer)/.test(remark)) {
     return proto == 1;
   }
   else {
