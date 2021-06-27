@@ -8,7 +8,6 @@ external-controller: 127.0.0.1:6170
 secret: ''
 ipv6: true
 
-proxies: 
 __nodes__
 
 proxy-groups: 
