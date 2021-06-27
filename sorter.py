@@ -10,8 +10,8 @@ import yaml
 def level(node):
     levels = {
         " CC": 7,
-        " AIA(?=.*Premium)": 6,
-        " AIA(?!.*Premium)": 5,
+        " AIA(?=\+)": 6,
+        " AIA(?!\+)": 5,
         " IEPL": 4,
         " BGP": 3,
         " AGA": 2,
