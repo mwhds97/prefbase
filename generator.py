@@ -35,12 +35,12 @@ clash_nodes = (
         sort_keys=False,
     )
     .decode("utf-8")
-    .strip()
+    .rstrip()
 )
 clash_remarks = ""
 for p in clash_list["proxies"]:
     clash_remarks += "  - " + p["name"] + "\n"
-clash_remarks = clash_remarks.strip()
+clash_remarks = clash_remarks.rstrip()
 with open("Dler.yaml", "r+", encoding="utf-8", newline="\n") as f:
     origin = f.read()
     f.seek(0)
@@ -55,7 +55,7 @@ surge_list.sort(key=level, reverse=True)
 surge_nodes = ""
 for l in surge_list:
     surge_nodes += l
-surge_nodes = surge_nodes.strip()
+surge_nodes = surge_nodes.rstrip()
 surge_remarks = ""
 for l in surge_list:
     surge_remarks += "," + re.match(r"^(.*?) =", l).group(1)
