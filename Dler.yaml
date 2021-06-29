@@ -16,161 +16,161 @@ proxy-groups:
   proxies:
   - DIRECT
   - REJECT
-__remarks__
+__Proxy__
 - name: TopBlocked
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__TopBlocked__
 - name: Domestic
   type: select
   proxies:
   - DIRECT
   - Proxy
   - REJECT
-__remarks__
+__Domestic__
 - name: Spam
   type: select
   proxies:
   - REJECT
   - DIRECT
   - Proxy
-__remarks__
+__Spam__
 - name: Crack
   type: select
   proxies:
   - REJECT
   - DIRECT
   - Proxy
-__remarks__
+__Crack__
 - name: Special
   type: select
   proxies:
   - DIRECT
   - Proxy
   - REJECT
-__remarks__
+__Special__
 - name: DomesticTV
   type: select
   proxies:
   - DIRECT
   - Proxy
   - REJECT
-__remarks__
+__DomesticTV__
 - name: YouTube
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__YouTube__
 - name: Netflix
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__Netflix__
 - name: Disney
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__Disney__
 - name: Spotify
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__Spotify__
 - name: GlobalTV
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__GlobalTV__
 - name: Microsoft
   type: select
   proxies:
   - DIRECT
   - Proxy
   - REJECT
-__remarks__
+__Microsoft__
 - name: Apple
   type: select
   proxies:
   - DIRECT
   - Proxy
   - REJECT
-__remarks__
+__Apple__
 - name: Steam
   type: select
   proxies:
   - DIRECT
   - Proxy
   - REJECT
-__remarks__
+__Steam__
 - name: Blizzard
   type: select
   proxies:
   - DIRECT
   - Proxy
   - REJECT
-__remarks__
+__Blizzard__
 - name: Scholar
   type: select
   proxies:
   - DIRECT
   - Proxy
   - REJECT
-__remarks__
+__Scholar__
 - name: Telegram
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__Telegram__
 - name: PTsite
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__PTsite__
 - name: PTtracker
   type: select
   proxies:
   - DIRECT
   - Proxy
   - REJECT
-__remarks__
+__PTtracker__
 - name: PayPal
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__PayPal__
 - name: Speedtest
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__Speedtest__
 - name: Others
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__remarks__
+__Others__
 
 rule-providers:
   Spam:

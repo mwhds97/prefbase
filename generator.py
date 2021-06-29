@@ -6,7 +6,26 @@ import re
 import yaml
 
 
-def level(node):
+def level_region(node):
+    levels = {
+        "香港": 9,
+        "新加坡": 8,
+        "日本": 7,
+        "美国": 6,
+        "台湾": 5,
+        "韩国": 4,
+        "俄罗斯": 3,
+        "德国": 2,
+        "英国": 1,
+    }
+    info = node if type(node) == str else node["name"]
+    for l in levels:
+        if re.search(l, info) != None:
+            return levels[l]
+    return 0
+
+
+def level_type(node):
     levels = {
         " CC": 6,
         " AIA": 5,
@@ -22,9 +41,36 @@ def level(node):
     return 0
 
 
+filters = {
+    "__Proxy__": ".*",
+    "__TopBlocked__": ".*",
+    "__Domestic__": ".*",
+    "__Spam__": ".*",
+    "__Crack__": ".*",
+    "__Special__": ".*",
+    "__DomesticTV__": ".*",
+    "__YouTube__": ".*",
+    "__Netflix__": ".*",
+    "__Disney__": ".*",
+    "__Spotify__": ".*",
+    "__GlobalTV__": ".*",
+    "__Microsoft__": ".*",
+    "__Apple__": ".*",
+    "__Steam__": ".*",
+    "__Blizzard__": ".*",
+    "__Scholar__": ".*",
+    "__Telegram__": ".*",
+    "__PTsite__": ".*",
+    "__PTtracker__": ".*",
+    "__PayPal__": ".*",
+    "__Speedtest__": ".*",
+    "__Others__": ".*",
+}
+
 with open("clash.list", "r", encoding="utf-8") as f:
     clash_list = yaml.load(f, yaml.FullLoader)
-clash_list["proxies"].sort(key=level, reverse=True)
+clash_list["proxies"].sort(key=level_region, reverse=True)
+clash_list["proxies"].sort(key=level_type, reverse=True)
 clash_nodes = (
     yaml.dump(
         clash_list,
@@ -37,32 +83,41 @@ clash_nodes = (
     .decode("utf-8")
     .rstrip()
 )
-clash_remarks = ""
-for p in clash_list["proxies"]:
-    clash_remarks += "  - " + p["name"] + "\n"
-clash_remarks = clash_remarks.rstrip()
+clash_remarks = {}
+for f in filters:
+    clash_remarks[f] = ""
+    for p in clash_list["proxies"]:
+        if re.search(filters[f], p["name"]) != None:
+            clash_remarks[f] += "  - " + p["name"] + "\n"
+    clash_remarks[f] = clash_remarks[f].rstrip()
 with open("Dler.yaml", "r+", encoding="utf-8", newline="\n") as f:
-    origin = f.read()
+    clash_conf = f.read()
+    clash_conf = clash_conf.replace("__nodes__", clash_nodes)
+    for r in clash_remarks:
+        clash_conf = clash_conf.replace(r, clash_remarks[r])
     f.seek(0)
     f.truncate()
-    f.write(
-        origin.replace("__nodes__", clash_nodes).replace("__remarks__", clash_remarks)
-    )
+    f.write(clash_conf)
 
 with open("surge.list", "r", encoding="utf-8") as f:
     surge_list = f.readlines()
-surge_list.sort(key=level, reverse=True)
+surge_list.sort(key=level_region, reverse=True)
+surge_list.sort(key=level_type, reverse=True)
 surge_nodes = ""
 for l in surge_list:
     surge_nodes += l
 surge_nodes = surge_nodes.rstrip()
-surge_remarks = ""
-for l in surge_list:
-    surge_remarks += "," + re.match(r"^(.*?) =", l).group(1)
+surge_remarks = {}
+for f in filters:
+    surge_remarks[f] = ""
+    for l in surge_list:
+        if re.search(filters[f], l) != None:
+            surge_remarks[f] += "," + re.match(r"^(.*?) =", l).group(1)
 with open("Dler.conf", "r+", encoding="utf-8", newline="\n") as f:
-    origin = f.read()
+    surge_conf = f.read()
+    surge_conf = surge_conf.replace("__nodes__", surge_nodes)
+    for r in surge_remarks:
+        surge_conf = surge_conf.replace(r, surge_remarks[r])
     f.seek(0)
     f.truncate()
-    f.write(
-        origin.replace("__nodes__", surge_nodes).replace("__remarks__", surge_remarks)
-    )
+    f.write(surge_conf)
