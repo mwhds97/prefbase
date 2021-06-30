@@ -1,0 +1,5 @@
+#!name=Block QUIC
+#!desc=封锁QUIC协议
+
+[Rule]
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
