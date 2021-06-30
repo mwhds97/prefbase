@@ -2,7 +2,6 @@
 #!desc=知乎去广告
 
 [Rule]
-URL-REGEX,^https?:\/\/www\.zhihu\.com\/appview\/(p|v2\/answer|zvideo)\/.*entry=(preload-topstory|preload-search|preload-subscription),DIRECT
 # 知乎广告拦截
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/script/zhihu/zhihu_remove_ads.list,REJECT-DROP
 
