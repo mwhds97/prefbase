@@ -491,6 +491,12 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Special.yaml'
     path: ./Rules/Special
     interval: 86400
+  Proxy:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Proxy.yaml'
+    path: ./Rules/Special
+    interval: 86400
   LAN:
     type: http
     behavior: classical
@@ -500,6 +506,7 @@ rule-providers:
 
 rules:
 - RULE-SET,Crack,Crack
+- RULE-SET,Proxy,Proxy
 - RULE-SET,Spam,Spam
 - RULE-SET,Special,Special
 #- RULE-SET,Downloader,Downloader
