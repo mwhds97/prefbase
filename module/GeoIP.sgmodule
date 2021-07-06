@@ -2,7 +2,7 @@
 #!desc=重定向GeoIP更新
 
 [URL Rewrite]
-^https?://download\.maxmind\.com/.*?tar\.gz https://cdn.jsdelivr.net/gh/mwhds97/GeoIP@master/GeoLite2-Country_20201231.tar.gz 302
+^https?://download\.maxmind\.com/.*?tar\.gz https://raw.githubusercontent.com/mwhds97/GeoIP/master/GeoLite2-Country_20201231.tar.gz 302
 
 [MITM]
 hostname = %APPEND% *.maxmind.com
