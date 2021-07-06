@@ -33,6 +33,11 @@ DOMAIN-SUFFIX,dl.google.com
 # > Microsoft
 USER-AGENT,Microsoft%20Remote%20Desktop*
 DOMAIN-SUFFIX,msftconnecttest.com
+DOMAIN-SUFFIX,windows.com
+DOMAIN-SUFFIX,windows.net
+DOMAIN-SUFFIX,windowsupdate.com
+DOMAIN-SUFFIX,xbox.com
+DOMAIN-SUFFIX,xboxlive.com
 
 # > Mugglepay
 DOMAIN-SUFFIX,invoice.mugglepay.com
@@ -52,9 +57,6 @@ DOMAIN-SUFFIX,tesla-cdn.thron.cn
 
 # > UUBooster
 PROCESS-NAME,UUBooster
-
-# > Windows
-DOMAIN-SUFFIX,windowsupdate.com
 
 # > Xunlei
 USER-AGENT,%E8%BF%85%E9%9B%B7
