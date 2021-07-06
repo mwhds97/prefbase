@@ -665,10 +665,9 @@ script:
         #   return "DIRECT"
         if metadata["dst_ip"] == "":
             metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
-        ruleset_list = [r for r in ruleset_action]
-        for rule_name in ruleset_list:
-            if ctx.rule_providers[rule_name].match(metadata):
-                return ruleset_action[rule_name]
+        for ruleset in ruleset_action:
+            if ctx.rule_providers[ruleset].match(metadata):
+                return ruleset_action[ruleset]
         if metadata["dst_ip"] == "":
             return "DIRECT"
         code = ctx.geoip(metadata["dst_ip"])
