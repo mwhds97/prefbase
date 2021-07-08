@@ -514,11 +514,11 @@ rules:
 - RULE-SET,Crack,Crack
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Proxy,Proxy
-- RULE-SET,Spam,Spam
 - RULE-SET,Special,Special
 #- RULE-SET,Downloader,Downloader
 - RULE-SET,PTtracker,PTtracker
 - RULE-SET,PTsite,PTsite
+- RULE-SET,Spam,Spam
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
 - RULE-SET,YouTube,YouTube
@@ -577,11 +577,11 @@ script:
             "Crack": "Crack",
             "Direct": "DIRECT",
             "Proxy": "Proxy",
-            "Spam": "Spam",
             "Special": "Special",
             # "Downloader": "Downloader",
             "PTtracker": "PTtracker",
             "PTsite": "PTsite",
+            "Spam": "Spam",
             "Netflix": "Netflix",
             "Spotify": "Spotify",
             "YouTube": "YouTube",
