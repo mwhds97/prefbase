@@ -491,6 +491,12 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Special.yaml'
     path: ./Rules/Special
     interval: 86400
+  Direct:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Direct.yaml'
+    path: ./Rules/Direct
+    interval: 86400
   Proxy:
     type: http
     behavior: classical
@@ -506,6 +512,7 @@ rule-providers:
 
 rules:
 - RULE-SET,Crack,Crack
+- RULE-SET,Direct,DIRECT
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Spam,Spam
 - RULE-SET,Special,Special
@@ -568,6 +575,7 @@ script:
     def main(ctx, metadata):
         ruleset_action = {
             "Crack": "Crack",
+            "Direct": "DIRECT",
             "Proxy": "Proxy",
             "Spam": "Spam",
             "Special": "Special",

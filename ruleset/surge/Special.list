@@ -64,6 +64,3 @@ DOMAIN-SUFFIX,xunlei.com
 
 DOMAIN-SUFFIX,smtp
 URL-REGEX,(Subject|HELO|SMTP)
-
-# > MLSUB
-DOMAIN-SUFFIX,mlsub.net
