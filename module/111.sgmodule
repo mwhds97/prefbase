@@ -1,0 +1,9 @@
+#!name=111
+#!desc=111
+
+[Rule]
+DOMAIN-KEYWORD,sany,DIRECT
+DOMAIN-KEYWORD,yunzhijia,DIRECT
+
+[Script]
+111 = type=event,event-name=network-changed,control-api=1,script-path=https://raw.githubusercontent.com/mwhds97/prefbase/master/111.js
