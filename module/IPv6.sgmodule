@@ -1,0 +1,5 @@
+#!name=IPv6
+#!desc=开启IPv6
+
+[General]
+ipv6 = true
