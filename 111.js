@@ -1,4 +1,5 @@
-if($network.wifi.ssid.toLowerCase().includes("sany")) {
+ssid = $network.wifi.ssid;
+if(typeof (ssid) != "undefined" && ssid.toLowerCase().includes("sany")) {
   $surge.setSelectGroupPolicy("Domestic", "Proxy");
   $surge.setSelectGroupPolicy("DomesticTV", "Proxy");
 }
