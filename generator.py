@@ -31,8 +31,9 @@ def level_type(node):
         " AIA": 5,
         " IEPL": 4,
         " BGP": 3,
-        " AGA": 2,
-        " GIA": 1,
+        " GIA": 2,
+        " 5G": 1,
+        " AGA": -1,
     }
     info = node if type(node) == str else node["name"]
     for l in levels:
