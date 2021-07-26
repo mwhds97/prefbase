@@ -136,6 +136,13 @@ __Scholar__
   - DIRECT
   - REJECT
 __Telegram__
+- name: SSH
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__SSH__
 - name: PTsite
   type: select
   proxies:
@@ -479,6 +486,12 @@ rule-providers:
 #    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Downloader.yaml'
 #    path: ./Rules/Downloader
 #    interval: 86400
+  SSH:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/SSH.yaml'
+    path: ./Rules/SSH
+    interval: 86400
   Crack:
     type: http
     behavior: classical
@@ -512,6 +525,7 @@ rule-providers:
 
 rules:
 - RULE-SET,Crack,Crack
+- RULE-SET,SSH,SSH
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Special,Special
@@ -575,6 +589,7 @@ script:
     def main(ctx, metadata):
         ruleset_action = {
             "Crack": "Crack",
+            "SSH": "SSH",
             "Direct": "DIRECT",
             "Proxy": "Proxy",
             "Special": "Special",

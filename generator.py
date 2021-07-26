@@ -61,6 +61,7 @@ filters = {
     "__Blizzard__": ".*",
     "__Scholar__": ".*",
     "__Telegram__": ".*",
+    "__SSH__": ".*",
     "__PTsite__": ".*",
     "__PTtracker__": ".*",
     "__PayPal__": ".*",
