@@ -1,0 +1,8 @@
+#!name=jezoe
+#!desc=jzsb
+
+[Rule]
+DOMAIN-KEYWORD,jezoe,DIRECT
+
+[Script]
+jezoe = type=event,event-name=network-changed,control-api=1,script-path=https://raw.githubusercontent.com/mwhds97/prefbase/master/jezoe.js
