@@ -143,20 +143,13 @@ __Telegram__
   - DIRECT
   - REJECT
 __SSH__
-- name: PTsite
+- name: PT
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__PTsite__
-- name: PTtracker
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - REJECT
-__PTtracker__
+__PT__
 - name: PayPal
   type: select
   proxies:
@@ -462,17 +455,11 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Scholar.yaml'
     path: ./Rules/Scholar
     interval: 86400
-  PTtracker:
+  PT:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PTtracker.yaml'
-    path: ./Rules/PTtracker
-    interval: 86400
-  PTsite:
-    type: http
-    behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PTsite.yaml'
-    path: ./Rules/PTsite
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PT.yaml'
+    path: ./Rules/PT
     interval: 86400
   Blizzard:
     type: http
@@ -530,8 +517,7 @@ rules:
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Special,Special
 #- RULE-SET,Downloader,Downloader
-- RULE-SET,PTtracker,PTtracker
-- RULE-SET,PTsite,PTsite
+- RULE-SET,PT,PT
 - RULE-SET,Spam,Spam
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
@@ -594,8 +580,7 @@ script:
             "Proxy": "Proxy",
             "Special": "Special",
             # "Downloader": "Downloader",
-            "PTtracker": "PTtracker",
-            "PTsite": "PTsite",
+            "PT": "PT",
             "Spam": "Spam",
             "Netflix": "Netflix",
             "Spotify": "Spotify",
