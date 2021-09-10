@@ -524,8 +524,16 @@ rules:
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Special,Special
 #- RULE-SET,Downloader,Downloader
-- RULE-SET,PT,PT
 - RULE-SET,Spam,Spam
+- RULE-SET,PT,PT
+- RULE-SET,Telegram,Telegram
+- RULE-SET,Steam,Steam
+- RULE-SET,Blizzard,Blizzard
+- RULE-SET,Speedtest,Speedtest
+- RULE-SET,PayPal,PayPal
+- RULE-SET,Microsoft,Microsoft
+- RULE-SET,Apple,Apple
+- RULE-SET,Scholar,Scholar
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
 - RULE-SET,YouTube,YouTube
@@ -563,15 +571,7 @@ rules:
 - RULE-SET,Pornhub,GlobalTV
 - RULE-SET,Soundcloud,GlobalTV
 - RULE-SET,ViuTV,GlobalTV
-- RULE-SET,Telegram,Telegram
-- RULE-SET,Steam,Steam
-- RULE-SET,Blizzard,Blizzard
-- RULE-SET,Speedtest,Speedtest
-- RULE-SET,PayPal,PayPal
-- RULE-SET,Microsoft,Microsoft
 - RULE-SET,TopBlocked,TopBlocked
-- RULE-SET,Apple,Apple
-- RULE-SET,Scholar,Scholar
 - RULE-SET,Domestic,Domestic
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,Domestic
@@ -588,8 +588,16 @@ script:
             "Proxy": "Proxy",
             "Special": "Special",
             # "Downloader": "Downloader",
-            "PT": "PT",
             "Spam": "Spam",
+            "PT": "PT",
+            "Telegram": "Telegram",
+            "Steam": "Steam",
+            "Blizzard": "Blizzard",
+            "Speedtest": "Speedtest",
+            "PayPal": "PayPal",
+            "Microsoft": "Microsoft",
+            "Apple": "Apple",
+            "Scholar": "Scholar",
             "Netflix": "Netflix",
             "Spotify": "Spotify",
             "YouTube": "YouTube",
@@ -627,15 +635,7 @@ script:
             "Pornhub": "GlobalTV",
             "Soundcloud": "GlobalTV",
             "ViuTV": "GlobalTV",
-            "Telegram": "Telegram",
-            "Steam": "Steam",
-            "Blizzard": "Blizzard",
-            "Speedtest": "Speedtest",
-            "PayPal": "PayPal",
-            "Microsoft": "Microsoft",
             "TopBlocked": "TopBlocked",
-            "Apple": "Apple",
-            "Scholar": "Scholar",
             "Domestic": "Domestic",
             "LAN": "DIRECT",
         }
