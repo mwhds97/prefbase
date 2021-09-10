@@ -44,11 +44,6 @@ payload:
   - PROCESS-NAME,v2ray
   - PROCESS-NAME,ss-local
 
-  # > Steam
-  # - User-Agent,Steam*
-  - DOMAIN-SUFFIX,pinyuncloud.com
-  - DOMAIN-SUFFIX,steamcontent.com
-
   # > Tesla
   - DOMAIN-SUFFIX,tesla.cn
   - DOMAIN-SUFFIX,tesla-cdn.thron.cn

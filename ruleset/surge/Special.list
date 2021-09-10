@@ -46,11 +46,6 @@ DOMAIN-SUFFIX,invoice.mugglepay.com
 PROCESS-NAME,v2ray
 PROCESS-NAME,ss-local
 
-# > Steam
-USER-AGENT,Steam*
-DOMAIN-SUFFIX,pinyuncloud.com
-DOMAIN-SUFFIX,steamcontent.com
-
 # > Tesla
 DOMAIN-SUFFIX,tesla.cn
 DOMAIN-SUFFIX,tesla-cdn.thron.cn

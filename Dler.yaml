@@ -407,12 +407,6 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Telegram.yaml'
     path: ./Rules/Telegram
     interval: 86400
-  Steam:
-    type: http
-    behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Steam.yaml'
-    path: ./Rules/Steam
-    interval: 86400
   Speedtest:
     type: http
     behavior: classical
@@ -460,6 +454,12 @@ rule-providers:
     behavior: classical
     url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PT.yaml'
     path: ./Rules/PT
+    interval: 86400
+  Steam:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Steam.yaml'
+    path: ./Rules/Steam
     interval: 86400
   Blizzard:
     type: http
