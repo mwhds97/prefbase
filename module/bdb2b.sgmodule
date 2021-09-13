@@ -1,0 +1,7 @@
+#!name=bdb2b
+#!desc=爱采购
+
+[Rule]
+DOMAIN-SUFFIX,bcebos.com,DIRECT
+DOMAIN-SUFFIX,b2b.baidu.com,DIRECT
+DOMAIN-SUFFIX,tcbox.baidu.com,DIRECT
