@@ -112,7 +112,7 @@ for f in filters:
     surge_remarks[f] = ""
     for l in surge_list:
         if re.search(filters[f], l) != None:
-            surge_remarks[f] += "," + re.match("^(.*?) =", l).group(1)
+            surge_remarks[f] += "," + re.match(r"^(.*?) =", l).group(1)
 with open("Dler.conf", "r+", encoding="utf-8", newline="\n") as f:
     surge_conf = f.read()
     surge_conf = surge_conf.replace("__nodes__", surge_nodes)
