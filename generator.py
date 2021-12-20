@@ -17,7 +17,7 @@ def level_region(node):
         "德国": 2,
         "英国": 1,
     }
-    info = node if type(node) == str else node["name"]
+    info = node if isinstance(node, str) else node["name"]
     for l in levels:
         if re.search(l, info) != None:
             return levels[l]
@@ -34,7 +34,7 @@ def level_type(node):
         " 5G": 1,
         " AGA": -1,
     }
-    info = node if type(node) == str else node["name"]
+    info = node if isinstance(node, str) else node["name"]
     for l in levels:
         if re.search(l, info) != None:
             return levels[l]
