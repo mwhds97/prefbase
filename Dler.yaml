@@ -203,11 +203,17 @@ rule-providers:
     url: 'https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Bilibili.yaml'
     path: ./Rules/Media/Bilibili
     interval: 86400
-  iQiyi:
+  IQ:
     type: http
     behavior: classical
-    url: 'https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/iQiyi.yaml'
-    path: ./Rules/Media/iQiyi
+    url: 'https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/IQ.yaml'
+    path: ./Rules/Media/IQ
+    interval: 86400
+  IQIYI:
+    type: http
+    behavior: classical
+    url: 'https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/IQIYI.yaml'
+    path: ./Rules/Media/IQIYI
     interval: 86400
   Letv:
     type: http
@@ -317,11 +323,17 @@ rule-providers:
     url: 'https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/Fox%2B.yaml'
     path: ./Rules/Media/Fox+
     interval: 86400
-  HBO:
+  HBO Go:
     type: http
     behavior: classical
-    url: 'https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/HBO.yaml'
-    path: ./Rules/Media/HBO
+    url: 'https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/HBO%20Go.yaml'
+    path: ./Rules/Media/HBO_Go
+    interval: 86400
+  HBO Max:
+    type: http
+    behavior: classical
+    url: 'https://gitee.com/lhie1/Rules/raw/master/Clash/Provider/Media/HBO%20Max.yaml'
+    path: ./Rules/Media/HBO_Max
     interval: 86400
   Hulu Japan:
     type: http
@@ -539,7 +551,8 @@ rules:
 - RULE-SET,YouTube,YouTube
 - RULE-SET,Disney Plus,Disney
 - RULE-SET,Bilibili,DomesticTV
-- RULE-SET,iQiyi,DomesticTV
+- RULE-SET,IQ,DomesticTV
+- RULE-SET,IQIYI,DomesticTV
 - RULE-SET,Letv,DomesticTV
 - RULE-SET,Netease Music,DomesticTV
 - RULE-SET,Tencent Video,DomesticTV
@@ -557,7 +570,8 @@ rules:
 - RULE-SET,encoreTVB,GlobalTV
 - RULE-SET,Fox Now,GlobalTV
 - RULE-SET,Fox+,GlobalTV
-- RULE-SET,HBO,GlobalTV
+- RULE-SET,HBO Go,GlobalTV
+- RULE-SET,HBO Max,GlobalTV
 - RULE-SET,Hulu Japan,GlobalTV
 - RULE-SET,Hulu,GlobalTV
 - RULE-SET,Japonx,GlobalTV
@@ -603,7 +617,8 @@ script:
             "YouTube": "YouTube",
             "Disney Plus": "Disney",
             "Bilibili": "DomesticTV",
-            "iQiyi": "DomesticTV",
+            "IQ": "DomesticTV",
+            "IQIYI": "DomesticTV",
             "Letv": "DomesticTV",
             "Netease Music": "DomesticTV",
             "Tencent Video": "DomesticTV",
@@ -621,7 +636,8 @@ script:
             "encoreTVB": "GlobalTV",
             "Fox Now": "GlobalTV",
             "Fox+": "GlobalTV",
-            "HBO": "GlobalTV",
+            "HBO Go": "GlobalTV",
+            "HBO Max": "GlobalTV",
             "Hulu Japan": "GlobalTV",
             "Hulu": "GlobalTV",
             "Japonx": "GlobalTV",
