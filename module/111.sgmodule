@@ -7,4 +7,4 @@ DOMAIN-KEYWORD,yunzhijia,DIRECT
 DOMAIN-KEYWORD,yunxuetang,DIRECT
 
 [Script]
-111 = type=event,event-name=network-changed,control-api=1,script-path=https://raw.githubusercontent.com/mwhds97/prefbase/master/111.js
+111 = type=event,event-name=network-changed,control-api=1,script-path=https://raw.githubusercontent.com/mwhds97/prefbase/master/script/111.js
