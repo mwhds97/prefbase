@@ -47,4 +47,3 @@ payload:
   - PROCESS-NAME,adobeupdatemanager.exe
   - PROCESS-NAME,adobeupdater.exe
   - PROCESS-NAME,adobeupdaterinstallmgr.exe
-  - PROCESS-NAME,uedit64.exe
