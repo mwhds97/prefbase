@@ -26,6 +26,7 @@ def level_region(node):
 
 def level_type(node):
     levels = {
+        " AC": 7,
         " HC": 6,
         " AIA": 5,
         " IEPL": 4,
@@ -68,12 +69,13 @@ filters = {
 }
 
 with open("clash.list", "r", encoding="utf-8") as f:
-    clash_list = yaml.load(f, yaml.FullLoader)
+    clash_list = yaml.load(f, yaml.CFullLoader)
 clash_list["proxies"].sort(key=level_region, reverse=True)
 clash_list["proxies"].sort(key=level_type, reverse=True)
 clash_nodes = (
     yaml.dump(
         clash_list,
+        Dumper=yaml.CDumper,
         default_flow_style=False,
         allow_unicode=True,
         line_break="\n",
