@@ -26,10 +26,11 @@ def level_region(node):
 
 def level_type(node):
     levels = {
-        " AC": 7,
-        " HC": 6,
-        " AIA": 5,
-        " IEPL": 4,
+        " AC": 8,
+        " HC": 7,
+        " AIA": 6,
+        " IEPL": 5,
+        " Lite": 4,
         " BGP": 3,
         " GIA": 2,
         " 5G": 1,
