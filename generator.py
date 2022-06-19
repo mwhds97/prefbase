@@ -26,14 +26,12 @@ def level_region(node):
 
 def level_type(node):
     levels = {
-        " AC": 7,
-        "( IEPL.*)?Premium": 6,
-        "( IEPL.*)?Lite": 4,
-        " IEPL": 5,
-        " BGP": 3,
-        " (GIA|Aliyun|DMIT)": 2,
+        " AC": 6,
+        "( IEPL.*)?Premium": 5,
+        "( IEPL.*)?Lite": 3,
+        " IEPL": 4,
+        " (BGP|GIA|Aliyun|DMIT)": 2,
         " 5G": 1,
-        " AGA": -1,
     }
     info = node if isinstance(node, str) else node["name"]
     for l in levels:
@@ -50,6 +48,7 @@ filters = {
     "__Crack__": ".*",
     "__Special__": ".*",
     "__DomesticTV__": ".*",
+    "__Douyin__": ".*",
     "__YouTube__": ".*",
     "__Netflix__": ".*",
     "__Disney__": ".*",
@@ -64,6 +63,7 @@ filters = {
     "__SSH__": ".*",
     "__PT__": ".*",
     "__PayPal__": ".*",
+    "__Crypto__": ".*",
     "__Speedtest__": ".*",
     "__Others__": ".*",
 }

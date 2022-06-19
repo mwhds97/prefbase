@@ -59,6 +59,13 @@ __Special__
   - Proxy
   - REJECT
 __DomesticTV__
+- name: Douyin
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - REJECT
+__Douyin__
 - name: YouTube
   type: select
   proxies:
@@ -157,6 +164,13 @@ __PT__
   - DIRECT
   - REJECT
 __PayPal__
+- name: Crypto
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__Crypto__
 - name: Speedtest
   type: select
   proxies:
@@ -311,6 +325,12 @@ rule-providers:
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/encoreTVB.yaml'
     path: ./Rules/Media/encoreTVB
     interval: 86400
+  F1 TV:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/F1%20TV.yaml'
+    path: ./Rules/Media/F1_TV
+    interval: 86400
   Fox Now:
     type: http
     behavior: classical
@@ -431,6 +451,12 @@ rule-providers:
     url: 'https://dler.cloud/Rules/Clash/Provider/PayPal.yaml'
     path: ./Rules/PayPal
     interval: 86400
+  Crypto:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Crypto.yaml'
+    path: ./Rules/Crypto
+    interval: 86400
   Microsoft:
     type: http
     behavior: classical
@@ -460,6 +486,12 @@ rule-providers:
     behavior: classical
     url: 'https://dler.cloud/Rules/Clash/Provider/Scholar.yaml'
     path: ./Rules/Scholar
+    interval: 86400
+  Douyin:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Douyin.yaml'
+    path: ./Rules/Douyin
     interval: 86400
   PT:
     type: http
@@ -543,9 +575,11 @@ rules:
 - RULE-SET,Blizzard,Blizzard
 - RULE-SET,Speedtest,Speedtest
 - RULE-SET,PayPal,PayPal
+- RULE-SET,Crypto,Crypto
 - RULE-SET,Microsoft,Microsoft
 - RULE-SET,Apple,Apple
 - RULE-SET,Scholar,Scholar
+- RULE-SET,Douyin,Douyin
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
 - RULE-SET,YouTube,YouTube
@@ -568,6 +602,7 @@ rules:
 - RULE-SET,DAZN,GlobalTV
 - RULE-SET,Discovery Plus,GlobalTV
 - RULE-SET,encoreTVB,GlobalTV
+- RULE-SET,F1 TV,GlobalTV
 - RULE-SET,Fox Now,GlobalTV
 - RULE-SET,Fox+,GlobalTV
 - RULE-SET,HBO Go,GlobalTV
@@ -609,9 +644,11 @@ script:
             "Blizzard": "Blizzard",
             "Speedtest": "Speedtest",
             "PayPal": "PayPal",
+            "Crypto": "Crypto",
             "Microsoft": "Microsoft",
             "Apple": "Apple",
             "Scholar": "Scholar",
+            "Douyin": "Douyin",
             "Netflix": "Netflix",
             "Spotify": "Spotify",
             "YouTube": "YouTube",
@@ -634,6 +671,7 @@ script:
             "DAZN": "GlobalTV",
             "Discovery Plus": "GlobalTV",
             "encoreTVB": "GlobalTV",
+            "F1 TV": "GlobalTV",
             "Fox Now": "GlobalTV",
             "Fox+": "GlobalTV",
             "HBO Go": "GlobalTV",
