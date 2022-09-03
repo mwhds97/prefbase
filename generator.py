@@ -63,6 +63,7 @@ filters = {
     "__Discord__": ".*",
     "__SSH__": ".*",
     "__PT__": ".*",
+    "__Drive__": ".*",
     "__PayPal__": ".*",
     "__Crypto__": ".*",
     "__Speedtest__": ".*",

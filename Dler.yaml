@@ -164,6 +164,13 @@ __SSH__
   - DIRECT
   - REJECT
 __PT__
+- name: Drive
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__Drive__
 - name: PayPal
   type: select
   proxies:
@@ -518,6 +525,12 @@ rule-providers:
     url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/PT.yaml'
     path: ./Rules/PT
     interval: 86400
+  Drive:
+    type: http
+    behavior: classical
+    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Drive.yaml'
+    path: ./Rules/Drive
+    interval: 86400
   Steam:
     type: http
     behavior: classical
@@ -589,6 +602,7 @@ rules:
 #- RULE-SET,Downloader,Downloader
 - RULE-SET,Spam,Spam
 - RULE-SET,PT,PT
+- RULE-SET,Drive,Drive
 - RULE-SET,Telegram,Telegram
 - RULE-SET,Discord,Discord
 - RULE-SET,Steam,Steam
@@ -660,6 +674,7 @@ script:
             # "Downloader": "Downloader",
             "Spam": "Spam",
             "PT": "PT",
+            "Drive": "Drive",
             "Telegram": "Telegram",
             "Discord": "Discord",
             "Steam": "Steam",
