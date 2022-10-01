@@ -8,6 +8,14 @@ external-controller: 127.0.0.1:6170
 secret: ''
 ipv6: true
 
+# Clash for Windows
+cfw-latency-timeout: 3000
+cfw-latency-url: http://cp.cloudflare.com/generate_204
+
+# Clash for Android
+clash-for-android: 
+  ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
+
 __nodes__
 
 proxy-groups: 
@@ -423,6 +431,12 @@ rule-providers:
     url: 'https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/myTV%20SUPER.yaml'
     path: ./Rules/Media/myTV_SUPER
     interval: 86400
+  Niconico:
+    type: http
+    behavior: classical
+    url: 'https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Niconico.yaml'
+    path: ./Rules/Media/Niconico
+    interval: 86400
   Pandora:
     type: http
     behavior: classical
@@ -650,6 +664,7 @@ rules:
 - RULE-SET,KKTV,GlobalTV
 - RULE-SET,Line TV,GlobalTV
 - RULE-SET,myTV SUPER,GlobalTV
+- RULE-SET,Niconico,GlobalTV
 - RULE-SET,Pandora,GlobalTV
 - RULE-SET,PBS,GlobalTV
 - RULE-SET,Pornhub,GlobalTV
@@ -722,6 +737,7 @@ script:
             "KKTV": "GlobalTV",
             "Line TV": "GlobalTV",
             "myTV SUPER": "GlobalTV",
+            "Niconico": "GlobalTV",
             "Pandora": "GlobalTV",
             "PBS": "GlobalTV",
             "Pornhub": "GlobalTV",
