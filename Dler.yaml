@@ -747,10 +747,8 @@ script:
             "Domestic": "Domestic",
             "LAN": "DIRECT",
         }
-        if metadata["network"] == "UDP":
-            if metadata["dst_port"] == "443":
-                ctx.log("[Script] QUIC traffic")
-                return "REJECT"
+        if metadata["network"] == "UDP" and metadata["dst_port"] == "443":
+            return "REJECT"
         port_list = [
             "21",
             "22",
@@ -785,16 +783,14 @@ script:
             "8889",
         ]
         # if metadata["dst_port"] not in port_list:
-        #   ctx.log("[Script] uncommon port")
         #   return "DIRECT"
         if metadata["dst_ip"] == "":
             metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
         for ruleset in ruleset_action:
             if ctx.rule_providers[ruleset].match(metadata):
                 return ruleset_action[ruleset]
-        if metadata["dst_ip"] == "":
-            return "DIRECT"
-        code = ctx.geoip(metadata["dst_ip"])
-        if code == "CN":
-            return "Domestic"
+        if metadata["dst_ip"] != "":
+            code = ctx.geoip(metadata["dst_ip"])
+            if code == "CN":
+                return "Domestic"
         return "Others"
