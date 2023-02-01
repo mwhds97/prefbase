@@ -46,6 +46,7 @@ filters = {
     "__Domestic__": ".*",
     "__Spam__": ".*",
     "__Crack__": ".*",
+    "__Downloader__": ".*",
     "__Special__": ".*",
     "__DomesticTV__": ".*",
     "__Douyin__": ".*",

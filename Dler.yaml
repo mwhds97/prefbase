@@ -46,13 +46,20 @@ __Domestic__
   - DIRECT
   - Proxy
 __Spam__
-- name: Crack
-  type: select
-  proxies:
-  - REJECT
-  - DIRECT
-  - Proxy
-__Crack__
+# - name: Crack
+#   type: select
+#   proxies:
+#   - REJECT
+#   - DIRECT
+#   - Proxy
+# __Crack__
+# - name: Downloader
+#   type: select
+#   proxies:
+#   - DIRECT
+#   - Proxy
+#   - REJECT
+# __Downloader__
 - name: Special
   type: select
   proxies:
@@ -557,24 +564,24 @@ rule-providers:
     url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Blizzard.yaml'
     path: ./Rules/Blizzard
     interval: 86400
-#  Downloader:
-#    type: http
-#    behavior: classical
-#    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Downloader.yaml'
-#    path: ./Rules/Downloader
-#    interval: 86400
+  # Downloader:
+  #   type: http
+  #   behavior: classical
+  #   url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Downloader.yaml'
+  #   path: ./Rules/Downloader
+  #   interval: 86400
   SSH:
     type: http
     behavior: classical
     url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/SSH.yaml'
     path: ./Rules/SSH
     interval: 86400
-  Crack:
-    type: http
-    behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Crack.yaml'
-    path: ./Rules/Crack
-    interval: 86400
+  # Crack:
+  #   type: http
+  #   behavior: classical
+  #   url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Crack.yaml'
+  #   path: ./Rules/Crack
+  #   interval: 86400
   Special:
     type: http
     behavior: classical
@@ -608,12 +615,12 @@ rule-providers:
 
 rules:
 - RULE-SET,Reject,REJECT
-- RULE-SET,Crack,Crack
+# - RULE-SET,Crack,Crack
 - RULE-SET,SSH,SSH
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Special,Special
-#- RULE-SET,Downloader,Downloader
+# - RULE-SET,Downloader,Downloader
 - RULE-SET,Spam,Spam
 - RULE-SET,PT,PT
 - RULE-SET,Drive,Drive
@@ -681,7 +688,7 @@ script:
     def main(ctx, metadata):
         ruleset_action = {
             "Reject": "REJECT",
-            "Crack": "Crack",
+            # "Crack": "Crack",
             "SSH": "SSH",
             "Direct": "DIRECT",
             "Proxy": "Proxy",
