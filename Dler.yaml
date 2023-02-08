@@ -116,6 +116,13 @@ __Spotify__
   - DIRECT
   - REJECT
 __GlobalTV__
+- name: ChatGPT
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__ChatGPT__
 - name: Microsoft
   type: select
   proxies:
@@ -504,6 +511,12 @@ rule-providers:
     url: 'https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Microsoft.yaml'
     path: ./Rules/Microsoft
     interval: 86400
+  ChatGPT:
+    type: http
+    behavior: classical
+    url: 'https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/ChatGPT.yaml'
+    path: ./Rules/ChatGPT
+    interval: 86400
   TopBlocked:
     type: http
     behavior: classical
@@ -632,6 +645,10 @@ rules:
 - RULE-SET,PayPal,PayPal
 - RULE-SET,Crypto,Crypto
 - RULE-SET,Microsoft,Microsoft
+- RULE-SET,ChatGPT,ChatGPT
+- RULE-SET,Apple Music,GlobalTV
+- RULE-SET,Apple News,GlobalTV
+- RULE-SET,Apple TV,GlobalTV
 - RULE-SET,Apple,Apple
 - RULE-SET,Scholar,Scholar
 - RULE-SET,Douyin,Douyin
@@ -650,9 +667,6 @@ rules:
 - RULE-SET,ABC,GlobalTV
 - RULE-SET,Abema TV,GlobalTV
 - RULE-SET,Amazon,GlobalTV
-- RULE-SET,Apple Music,GlobalTV
-- RULE-SET,Apple News,GlobalTV
-- RULE-SET,Apple TV,GlobalTV
 - RULE-SET,Bahamut,GlobalTV
 - RULE-SET,BBC iPlayer,GlobalTV
 - RULE-SET,DAZN,GlobalTV
@@ -705,6 +719,10 @@ script:
             "PayPal": "PayPal",
             "Crypto": "Crypto",
             "Microsoft": "Microsoft",
+            "ChatGPT": "ChatGPT",
+            "Apple Music": "GlobalTV",
+            "Apple News": "GlobalTV",
+            "Apple TV": "GlobalTV",
             "Apple": "Apple",
             "Scholar": "Scholar",
             "Douyin": "Douyin",
@@ -723,9 +741,6 @@ script:
             "ABC": "GlobalTV",
             "Abema TV": "GlobalTV",
             "Amazon": "GlobalTV",
-            "Apple Music": "GlobalTV",
-            "Apple News": "GlobalTV",
-            "Apple TV": "GlobalTV",
             "Bahamut": "GlobalTV",
             "BBC iPlayer": "GlobalTV",
             "DAZN": "GlobalTV",

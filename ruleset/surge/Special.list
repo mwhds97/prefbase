@@ -22,9 +22,6 @@ DOMAIN-SUFFIX,mzstatic.com
 # > Duet
 USER-AGENT,duet*
 
-# > Epic
-DOMAIN-KEYWORD,epicgames
-
 # > Google
 DOMAIN-KEYWORD,mtalk.google.com
 DOMAIN,safebrowsing.googleapis.com

@@ -55,6 +55,7 @@ filters = {
     "__Disney__": ".*",
     "__Spotify__": ".*",
     "__GlobalTV__": ".*",
+    "__ChatGPT__": ".*",
     "__Microsoft__": ".*",
     "__Apple__": ".*",
     "__Steam__": ".*",
