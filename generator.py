@@ -19,23 +19,23 @@ def level_region(node):
     }
     info = node if isinstance(node, str) else node["name"]
     for l in levels:
-        if re.search(l, info) != None:
+        if re.search(l, info) is not None:
             return levels[l]
     return 0
 
 
 def level_type(node):
     levels = {
-        " AC": 6,
-        "( IEPL.*)?Premium": 5,
-        "( IEPL.*)?Lite": 3,
-        " IEPL": 4,
-        " (BGP|GIA|Aliyun|DMIT)": 2,
-        " 5G": 1,
+        " AC": 5,
+        " IEPL.*?Premium": 4,
+        " IEPL.*?Lite": 2,
+        " IEPL": 3,
+        " (BGP|GIA)": 1,
+        " 5G": -1,
     }
     info = node if isinstance(node, str) else node["name"]
     for l in levels:
-        if re.search(l, info) != None:
+        if re.search(l, info) is not None:
             return levels[l]
     return 0
 
@@ -93,7 +93,7 @@ clash_remarks = {}
 for f in filters:
     clash_remarks[f] = ""
     for p in clash_list["proxies"]:
-        if re.search(filters[f], p["name"]) != None:
+        if re.search(filters[f], p["name"]) is not None:
             clash_remarks[f] += "  - " + p["name"] + "\n"
     clash_remarks[f] = clash_remarks[f].rstrip()
 with open("Dler.yaml", "r+", encoding="utf-8", newline="\n") as f:
@@ -117,7 +117,7 @@ surge_remarks = {}
 for f in filters:
     surge_remarks[f] = ""
     for l in surge_list:
-        if re.search(filters[f], l) != None:
+        if re.search(filters[f], l) is not None:
             surge_remarks[f] += "," + re.match(r"^(.*?) =", l).group(1)
 with open("Dler.conf", "r+", encoding="utf-8", newline="\n") as f:
     surge_conf = f.read()
