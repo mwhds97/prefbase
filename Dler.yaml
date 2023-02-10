@@ -52,14 +52,14 @@ __Spam__
 #   - REJECT
 #   - DIRECT
 #   - Proxy
-# __Crack__
+# Crack
 # - name: Downloader
 #   type: select
 #   proxies:
 #   - DIRECT
 #   - Proxy
 #   - REJECT
-# __Downloader__
+# Downloader
 - name: Special
   type: select
   proxies:
