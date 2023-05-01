@@ -226,7 +226,7 @@ rule-providers:
   Spam:
     type: http
     behavior: domain
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Domain.yaml'
     path: ./Rules/Spam
     interval: 86400
   Netflix:
@@ -556,67 +556,67 @@ rule-providers:
   PT:
     type: http
     behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/PT.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PT.yaml'
     path: ./Rules/PT
     interval: 86400
   Drive:
     type: http
     behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Drive.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Drive.yaml'
     path: ./Rules/Drive
     interval: 86400
   Steam:
     type: http
     behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Steam.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Steam.yaml'
     path: ./Rules/Steam
     interval: 86400
   Blizzard:
     type: http
     behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Blizzard.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Blizzard.yaml'
     path: ./Rules/Blizzard
     interval: 86400
   # Downloader:
   #   type: http
   #   behavior: classical
-  #   url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Downloader.yaml'
+  #   url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Downloader.yaml'
   #   path: ./Rules/Downloader
   #   interval: 86400
   SSH:
     type: http
     behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/SSH.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/SSH.yaml'
     path: ./Rules/SSH
     interval: 86400
   # Crack:
   #   type: http
   #   behavior: classical
-  #   url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Crack.yaml'
+  #   url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Crack.yaml'
   #   path: ./Rules/Crack
   #   interval: 86400
   Special:
     type: http
     behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Special.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Special.yaml'
     path: ./Rules/Special
     interval: 86400
   Direct:
     type: http
     behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Direct.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Direct.yaml'
     path: ./Rules/Direct
     interval: 86400
   Proxy:
     type: http
     behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Proxy.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Proxy.yaml'
     path: ./Rules/Proxy
     interval: 86400
   Reject:
     type: http
     behavior: classical
-    url: 'https://ghproxy.com/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Reject.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Reject.yaml'
     path: ./Rules/Reject
     interval: 86400
   LAN:
