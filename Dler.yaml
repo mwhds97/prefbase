@@ -4,8 +4,8 @@ socks-port: 7892
 allow-lan: false
 mode: rule
 log-level: info
-external-controller: 127.0.0.1:6170
-secret: ''
+external-controller: 0.0.0.0:6170
+secret: ted423
 ipv6: true
 
 # Clash for Windows
@@ -13,12 +13,12 @@ cfw-latency-timeout: 3000
 cfw-latency-url: http://cp.cloudflare.com/generate_204
 
 # Clash for Android
-clash-for-android: 
+clash-for-android:
   ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
 
 __nodes__
 
-proxy-groups: 
+proxy-groups:
 - name: Proxy
   type: select
   proxies:
@@ -67,69 +67,6 @@ __Spam__
   - Proxy
   - REJECT
 __Special__
-- name: DomesticTV
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - REJECT
-__DomesticTV__
-- name: Douyin
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - REJECT
-__Douyin__
-- name: YouTube
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__YouTube__
-- name: Netflix
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__Netflix__
-- name: Disney
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__Disney__
-- name: Spotify
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__Spotify__
-- name: GlobalTV
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__GlobalTV__
-- name: ChatGPT
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__ChatGPT__
-- name: Microsoft
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - REJECT
-__Microsoft__
 - name: Apple
   type: select
   proxies:
@@ -137,13 +74,6 @@ __Microsoft__
   - Proxy
   - REJECT
 __Apple__
-- name: Steam
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - REJECT
-__Steam__
 - name: Blizzard
   type: select
   proxies:
@@ -151,55 +81,13 @@ __Steam__
   - Proxy
   - REJECT
 __Blizzard__
-- name: Scholar
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - REJECT
-__Scholar__
-- name: Telegram
+- name: ChatGPT
   type: select
   proxies:
   - Proxy
   - DIRECT
   - REJECT
-__Telegram__
-- name: Discord
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__Discord__
-- name: SSH
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__SSH__
-- name: PT
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__PT__
-- name: Drive
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__Drive__
-- name: PayPal
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__PayPal__
+__ChatGPT__
 - name: Crypto
   type: select
   proxies:
@@ -207,6 +95,55 @@ __PayPal__
   - DIRECT
   - REJECT
 __Crypto__
+- name: Discord
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__Discord__
+- name: Drive
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__Drive__
+- name: Microsoft
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - REJECT
+__Microsoft__
+- name: miHoYo
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - REJECT
+__miHoYo__
+- name: PayPal
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__PayPal__
+- name: PT
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__PT__
+- name: Scholar
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - REJECT
+__Scholar__
 - name: Speedtest
   type: select
   proxies:
@@ -214,6 +151,76 @@ __Crypto__
   - DIRECT
   - REJECT
 __Speedtest__
+- name: SSH
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__SSH__
+- name: Steam
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - REJECT
+__Steam__
+- name: Telegram
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__Telegram__
+- name: Disney
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__Disney__
+- name: Douyin
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - REJECT
+__Douyin__
+- name: Netflix
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__Netflix__
+- name: Spotify
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__Spotify__
+- name: YouTube
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__YouTube__
+- name: DomesticTV
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - REJECT
+__DomesticTV__
+- name: GlobalTV
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__GlobalTV__
 - name: Others
   type: select
   proxies:
@@ -223,78 +230,6 @@ __Speedtest__
 __Others__
 
 rule-providers:
-  Spam:
-    type: http
-    behavior: domain
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Domain.yaml'
-    path: ./Rules/Spam
-    interval: 86400
-  Netflix:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Netflix.yaml'
-    path: ./Rules/Media/Netflix
-    interval: 86400
-  Spotify:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Spotify.yaml'
-    path: ./Rules/Media/Spotify
-    interval: 86400
-  YouTube:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/YouTube.yaml'
-    path: ./Rules/Media/YouTube
-    interval: 86400
-  Bilibili:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Bilibili.yaml'
-    path: ./Rules/Media/Bilibili
-    interval: 86400
-  IQ:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/IQ.yaml'
-    path: ./Rules/Media/IQ
-    interval: 86400
-  IQIYI:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/IQIYI.yaml'
-    path: ./Rules/Media/IQIYI
-    interval: 86400
-  Letv:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Letv.yaml'
-    path: ./Rules/Media/Letv
-    interval: 86400
-  Netease Music:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Netease%20Music.yaml'
-    path: ./Rules/Media/Netease_Music
-    interval: 86400
-  Tencent Video:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Tencent%20Video.yaml'
-    path: ./Rules/Media/Tencent_Video
-    interval: 86400
-  Youku:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Youku.yaml'
-    path: ./Rules/Media/Youku
-    interval: 86400
-  WeTV:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/WeTV.yaml'
-    path: ./Rules/Media/WeTV
-    interval: 86400
   ABC:
     type: http
     behavior: classical
@@ -312,6 +247,12 @@ rule-providers:
     behavior: classical
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/Amazon.yaml'
     path: ./Rules/Media/Amazon
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Apple.yaml'
+    path: ./Rules/Apple
     interval: 86400
   Apple Music:
     type: http
@@ -343,11 +284,53 @@ rule-providers:
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/BBC%20iPlayer.yaml'
     path: ./Rules/Media/BBC_iPlayer
     interval: 86400
+  Bilibili:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Bilibili.yaml'
+    path: ./Rules/Media/Bilibili
+    interval: 86400
+  Blizzard:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Blizzard.yaml'
+    path: ./Rules/Blizzard
+    interval: 86400
+  ChatGPT:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/ChatGPT.yaml'
+    path: ./Rules/ChatGPT
+    interval: 86400
+  # Crack:
+  #   type: http
+  #   behavior: classical
+  #   url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Crack.yaml'
+  #   path: ./Rules/Crack
+  #   interval: 86400
+  Crypto:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Crypto.yaml'
+    path: ./Rules/Crypto
+    interval: 86400
   DAZN:
     type: http
     behavior: classical
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/DAZN.yaml'
     path: ./Rules/Media/DAZN
+    interval: 86400
+  Direct:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Direct.yaml'
+    path: ./Rules/Direct
+    interval: 86400
+  Discord:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Discord.yaml'
+    path: ./Rules/Discord
     interval: 86400
   Discovery Plus:
     type: http
@@ -360,6 +343,30 @@ rule-providers:
     behavior: classical
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/Disney%20Plus.yaml'
     path: ./Rules/Media/Disney_Plus
+    interval: 86400
+  Domestic:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Domestic.yaml'
+    path: ./Rules/Domestic
+    interval: 86400
+  Douyin:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Douyin.yaml'
+    path: ./Rules/Douyin
+    interval: 86400
+  # Downloader:
+  #   type: http
+  #   behavior: classical
+  #   url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Downloader.yaml'
+  #   path: ./Rules/Downloader
+  #   interval: 86400
+  Drive:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Drive.yaml'
+    path: ./Rules/Drive
     interval: 86400
   encoreTVB:
     type: http
@@ -397,17 +404,29 @@ rule-providers:
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/HBO%20Max.yaml'
     path: ./Rules/Media/HBO_Max
     interval: 86400
+  Hulu:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Hulu.yaml'
+    path: ./Rules/Media/Hulu
+    interval: 86400
   Hulu Japan:
     type: http
     behavior: classical
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/Hulu%20Japan.yaml'
     path: ./Rules/Media/Hulu_Japan
     interval: 86400
-  Hulu:
+  IQ:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Hulu.yaml'
-    path: ./Rules/Media/Hulu
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/IQ.yaml'
+    path: ./Rules/Media/IQ
+    interval: 86400
+  IQIYI:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/IQIYI.yaml'
+    path: ./Rules/Media/IQIYI
     interval: 86400
   Japonx:
     type: http
@@ -433,17 +452,59 @@ rule-providers:
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/KKTV.yaml'
     path: ./Rules/Media/KKTV
     interval: 86400
+  LAN:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/LAN.yaml'
+    path: ./Rules/LAN
+    interval: 86400
+  Letv:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Letv.yaml'
+    path: ./Rules/Media/Letv
+    interval: 86400
   Line TV:
     type: http
     behavior: classical
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/Line%20TV.yaml'
     path: ./Rules/Media/Line_TV
     interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Microsoft.yaml'
+    path: ./Rules/Microsoft
+    interval: 86400
+  miHoYo:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/miHoYo.yaml'
+    path: ./Rules/miHoYo
+    interval: 86400
+  # MOO:
+  #   type: http
+  #   behavior: classical
+  #   url: 'https://dler.cloud/Rules/Clash/Provider/Media/MOO.yaml'
+  #   path: ./Rules/Media/MOO
+  #   interval: 86400
   myTV SUPER:
     type: http
     behavior: classical
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/myTV%20SUPER.yaml'
     path: ./Rules/Media/myTV_SUPER
+    interval: 86400
+  Netease Music:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Netease%20Music.yaml'
+    path: ./Rules/Media/Netease_Music
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Netflix.yaml'
+    path: ./Rules/Media/Netflix
     interval: 86400
   Niconico:
     type: http
@@ -457,6 +518,12 @@ rule-providers:
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/Pandora.yaml'
     path: ./Rules/Media/Pandora
     interval: 86400
+  PayPal:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/PayPal.yaml'
+    path: ./Rules/PayPal
+    interval: 86400
   PBS:
     type: http
     behavior: classical
@@ -469,89 +536,11 @@ rule-providers:
     url: 'https://dler.cloud/Rules/Clash/Provider/Media/Pornhub.yaml'
     path: ./Rules/Media/Pornhub
     interval: 86400
-  Soundcloud:
+  Proxy:
     type: http
     behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Soundcloud.yaml'
-    path: ./Rules/Media/Soundcloud
-    interval: 86400
-  ViuTV:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Media/ViuTV.yaml'
-    path: ./Rules/Media/ViuTV
-    interval: 86400
-  Telegram:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Telegram.yaml'
-    path: ./Rules/Telegram
-    interval: 86400
-  Speedtest:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Speedtest.yaml'
-    path: ./Rules/Speedtest
-    interval: 86400
-  PayPal:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/PayPal.yaml'
-    path: ./Rules/PayPal
-    interval: 86400
-  Crypto:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Crypto.yaml'
-    path: ./Rules/Crypto
-    interval: 86400
-  Microsoft:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Microsoft.yaml'
-    path: ./Rules/Microsoft
-    interval: 86400
-  ChatGPT:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/ChatGPT.yaml'
-    path: ./Rules/ChatGPT
-    interval: 86400
-  TopBlocked:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Proxy.yaml'
-    path: ./Rules/TopBlocked
-    interval: 86400
-  Domestic:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Domestic.yaml'
-    path: ./Rules/Domestic
-    interval: 86400
-  Apple:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Apple.yaml'
-    path: ./Rules/Apple
-    interval: 86400
-  Scholar:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Scholar.yaml'
-    path: ./Rules/Scholar
-    interval: 86400
-  Douyin:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Douyin.yaml'
-    path: ./Rules/Douyin
-    interval: 86400
-  Discord:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/Discord.yaml'
-    path: ./Rules/Discord
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Proxy.yaml'
+    path: ./Rules/Proxy
     interval: 86400
   PT:
     type: http
@@ -559,11 +548,53 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/PT.yaml'
     path: ./Rules/PT
     interval: 86400
-  Drive:
+  Reject:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Drive.yaml'
-    path: ./Rules/Drive
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Reject.yaml'
+    path: ./Rules/Reject
+    interval: 86400
+  Scholar:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Scholar.yaml'
+    path: ./Rules/Scholar
+    interval: 86400
+  Soundcloud:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Soundcloud.yaml'
+    path: ./Rules/Media/Soundcloud
+    interval: 86400
+  Spam:
+    type: http
+    behavior: domain
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Domain.yaml'
+    path: ./Rules/Spam
+    interval: 86400
+  Special:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Special.yaml'
+    path: ./Rules/Special
+    interval: 86400
+  Speedtest:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Speedtest.yaml'
+    path: ./Rules/Speedtest
+    interval: 86400
+  Spotify:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Spotify.yaml'
+    path: ./Rules/Media/Spotify
+    interval: 86400
+  SSH:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/SSH.yaml'
+    path: ./Rules/SSH
     interval: 86400
   Steam:
     type: http
@@ -571,59 +602,53 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Steam.yaml'
     path: ./Rules/Steam
     interval: 86400
-  Blizzard:
+  Telegram:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Blizzard.yaml'
-    path: ./Rules/Blizzard
+    url: 'https://dler.cloud/Rules/Clash/Provider/Telegram.yaml'
+    path: ./Rules/Telegram
     interval: 86400
-  # Downloader:
+  Tencent Video:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Tencent%20Video.yaml'
+    path: ./Rules/Media/Tencent_Video
+    interval: 86400
+  TopBlocked:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Proxy.yaml'
+    path: ./Rules/TopBlocked
+    interval: 86400
+  ViuTV:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/ViuTV.yaml'
+    path: ./Rules/Media/ViuTV
+    interval: 86400
+  WeTV:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/WeTV.yaml'
+    path: ./Rules/Media/WeTV
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/YouTube.yaml'
+    path: ./Rules/Media/YouTube
+    interval: 86400
+  # YouTube Music:
   #   type: http
   #   behavior: classical
-  #   url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Downloader.yaml'
-  #   path: ./Rules/Downloader
+  #   url: 'https://dler.cloud/Rules/Clash/Provider/Media/YouTube%20Music.yaml'
+  #   path: ./Rules/Media/YouTube_Music
   #   interval: 86400
-  SSH:
+  Youku:
     type: http
     behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/SSH.yaml'
-    path: ./Rules/SSH
-    interval: 86400
-  # Crack:
-  #   type: http
-  #   behavior: classical
-  #   url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Crack.yaml'
-  #   path: ./Rules/Crack
-  #   interval: 86400
-  Special:
-    type: http
-    behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Special.yaml'
-    path: ./Rules/Special
-    interval: 86400
-  Direct:
-    type: http
-    behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Direct.yaml'
-    path: ./Rules/Direct
-    interval: 86400
-  Proxy:
-    type: http
-    behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Proxy.yaml'
-    path: ./Rules/Proxy
-    interval: 86400
-  Reject:
-    type: http
-    behavior: classical
-    url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Reject.yaml'
-    path: ./Rules/Reject
-    interval: 86400
-  LAN:
-    type: http
-    behavior: classical
-    url: 'https://dler.cloud/Rules/Clash/Provider/LAN.yaml'
-    path: ./Rules/LAN
+    url: 'https://dler.cloud/Rules/Clash/Provider/Media/Youku.yaml'
+    path: ./Rules/Media/Youku
     interval: 86400
 
 rules:
@@ -636,38 +661,41 @@ rules:
 - RULE-SET,Special,Special
 # - RULE-SET,Downloader,Downloader
 - RULE-SET,Spam,Spam
-- RULE-SET,PT,PT
-- RULE-SET,Drive,Drive
-- RULE-SET,Telegram,Telegram
-- RULE-SET,Discord,Discord
-- RULE-SET,Steam,Steam
-- RULE-SET,Blizzard,Blizzard
-- RULE-SET,Speedtest,Speedtest
-- RULE-SET,PayPal,PayPal
-- RULE-SET,Crypto,Crypto
-- RULE-SET,Microsoft,Microsoft
-- RULE-SET,ChatGPT,ChatGPT
-- RULE-SET,Apple Music,GlobalTV
-- RULE-SET,Apple News,GlobalTV
-- RULE-SET,Apple TV,GlobalTV
 - RULE-SET,Apple,Apple
+- RULE-SET,Blizzard,Blizzard
+- RULE-SET,ChatGPT,ChatGPT
+- RULE-SET,Crypto,Crypto
+- RULE-SET,Discord,Discord
+- RULE-SET,Drive,Drive
+- RULE-SET,Microsoft,Microsoft
+- RULE-SET,miHoYo,miHoYo
+- RULE-SET,PayPal,PayPal
+- RULE-SET,PT,PT
 - RULE-SET,Scholar,Scholar
+- RULE-SET,Speedtest,Speedtest
+- RULE-SET,Steam,Steam
+- RULE-SET,Telegram,Telegram
+- RULE-SET,Disney Plus,Disney
 - RULE-SET,Douyin,Douyin
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
 - RULE-SET,YouTube,YouTube
-- RULE-SET,Disney Plus,Disney
+# - RULE-SET,YouTube Music,YouTube
 - RULE-SET,Bilibili,DomesticTV
 - RULE-SET,IQ,DomesticTV
 - RULE-SET,IQIYI,DomesticTV
 - RULE-SET,Letv,DomesticTV
+# - RULE-SET,MOO,DomesticTV
 - RULE-SET,Netease Music,DomesticTV
 - RULE-SET,Tencent Video,DomesticTV
-- RULE-SET,Youku,DomesticTV
 - RULE-SET,WeTV,DomesticTV
+- RULE-SET,Youku,DomesticTV
 - RULE-SET,ABC,GlobalTV
 - RULE-SET,Abema TV,GlobalTV
 - RULE-SET,Amazon,GlobalTV
+- RULE-SET,Apple Music,GlobalTV
+- RULE-SET,Apple News,GlobalTV
+- RULE-SET,Apple TV,GlobalTV
 - RULE-SET,Bahamut,GlobalTV
 - RULE-SET,BBC iPlayer,GlobalTV
 - RULE-SET,DAZN,GlobalTV
@@ -678,8 +706,8 @@ rules:
 - RULE-SET,Fox+,GlobalTV
 - RULE-SET,HBO Go,GlobalTV
 - RULE-SET,HBO Max,GlobalTV
-- RULE-SET,Hulu Japan,GlobalTV
 - RULE-SET,Hulu,GlobalTV
+- RULE-SET,Hulu Japan,GlobalTV
 - RULE-SET,Japonx,GlobalTV
 - RULE-SET,JOOX,GlobalTV
 - RULE-SET,KKBOX,GlobalTV
@@ -712,38 +740,39 @@ script:
             "Special": "Special",
             # "Downloader": "Downloader",
             "Spam": "Spam",
-            "PT": "PT",
-            "Drive": "Drive",
-            "Telegram": "Telegram",
-            "Discord": "Discord",
-            "Steam": "Steam",
-            "Blizzard": "Blizzard",
-            "Speedtest": "Speedtest",
-            "PayPal": "PayPal",
-            "Crypto": "Crypto",
-            "Microsoft": "Microsoft",
-            "ChatGPT": "ChatGPT",
-            "Apple Music": "GlobalTV",
-            "Apple News": "GlobalTV",
-            "Apple TV": "GlobalTV",
             "Apple": "Apple",
+            "Blizzard": "Blizzard",
+            "ChatGPT": "ChatGPT",
+            "Crypto": "Crypto",
+            "Discord": "Discord",
+            "Drive": "Drive",
+            "Microsoft": "Microsoft",
+            "miHoYo": "miHoYo",
+            "PayPal": "PayPal",
+            "PT": "PT",
             "Scholar": "Scholar",
+            "Speedtest": "Speedtest",
+            "Steam": "Steam",
+            "Telegram": "Telegram",
+            "Disney Plus": "Disney",
             "Douyin": "Douyin",
             "Netflix": "Netflix",
             "Spotify": "Spotify",
             "YouTube": "YouTube",
-            "Disney Plus": "Disney",
             "Bilibili": "DomesticTV",
             "IQ": "DomesticTV",
             "IQIYI": "DomesticTV",
             "Letv": "DomesticTV",
             "Netease Music": "DomesticTV",
             "Tencent Video": "DomesticTV",
-            "Youku": "DomesticTV",
             "WeTV": "DomesticTV",
+            "Youku": "DomesticTV",
             "ABC": "GlobalTV",
             "Abema TV": "GlobalTV",
             "Amazon": "GlobalTV",
+            "Apple Music": "GlobalTV",
+            "Apple News": "GlobalTV",
+            "Apple TV": "GlobalTV",
             "Bahamut": "GlobalTV",
             "BBC iPlayer": "GlobalTV",
             "DAZN": "GlobalTV",
@@ -754,8 +783,8 @@ script:
             "Fox+": "GlobalTV",
             "HBO Go": "GlobalTV",
             "HBO Max": "GlobalTV",
-            "Hulu Japan": "GlobalTV",
             "Hulu": "GlobalTV",
+            "Hulu Japan": "GlobalTV",
             "Japonx": "GlobalTV",
             "JOOX": "GlobalTV",
             "KKBOX": "GlobalTV",
