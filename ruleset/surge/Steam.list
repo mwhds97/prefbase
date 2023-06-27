@@ -4,7 +4,6 @@ DOMAIN-SUFFIX,humblebundle.com
 DOMAIN-SUFFIX,steamcommunity.com
 DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,steamstatic.com
-DOMAIN-SUFFIX,pinyuncloud.com
 DOMAIN-SUFFIX,steamcontent.com
 DOMAIN-SUFFIX,steamserver.net
 DOMAIN-SUFFIX,steampipe.akamaized.net
@@ -23,11 +22,11 @@ DOMAIN-SUFFIX,underlords.com
 DOMAIN-SUFFIX,valvesoftware.com
 DOMAIN-SUFFIX,steamchina.com
 DOMAIN-SUFFIX,wmsjsteam.com
-DOMAIN-SUFFIX,dl.steam.clngaa.com
-DOMAIN-SUFFIX,dl.steam.ksyna.com
-DOMAIN-SUFFIX,st.dl.bscstorage.net
-DOMAIN-SUFFIX,st.dl.eccdnx.com
-DOMAIN-SUFFIX,st.dl.pinyuncloud.com
-DOMAIN-SUFFIX,steampipe.steamcontent.tnkjmec.com
+DOMAIN-SUFFIX,clngaa.com
+DOMAIN-SUFFIX,ksyna.com
+DOMAIN-SUFFIX,bscstorage.net
+DOMAIN-SUFFIX,eccdnx.com
+DOMAIN-SUFFIX,pinyuncloud.com
+DOMAIN-SUFFIX,tnkjmec.com
 DOMAIN-SUFFIX,steampowered.com.8686c.com
 DOMAIN-SUFFIX,steamstatic.com.8686c.com

@@ -23,32 +23,22 @@ DOMAIN-SUFFIX,mzstatic.com
 USER-AGENT,duet*
 
 # > Google
-DOMAIN-KEYWORD,mtalk.google.com
 DOMAIN,safebrowsing.googleapis.com
 DOMAIN-SUFFIX,dl.google.com
 
 # > Microsoft
 USER-AGENT,Microsoft%20Remote%20Desktop*
 DOMAIN-SUFFIX,msftconnecttest.com
-DOMAIN-SUFFIX,windows.com
-DOMAIN-SUFFIX,windows.net
-DOMAIN-SUFFIX,windowsupdate.com
-DOMAIN-SUFFIX,xbox.com
-DOMAIN-SUFFIX,xboxlive.com
-
-# > Mugglepay
-DOMAIN-SUFFIX,invoice.mugglepay.com
 
 # > Proxy plugin
 PROCESS-NAME,v2ray
 PROCESS-NAME,ss-local
 
-# > Tesla
-DOMAIN-SUFFIX,tesla.cn
-DOMAIN-SUFFIX,tesla-cdn.thron.cn
-
 # > UUBooster
 PROCESS-NAME,UUBooster
+
+# > WiFiman
+DOMAIN-SUFFIX,app-measurement.com
 
 # > Xunlei
 USER-AGENT,%E8%BF%85%E9%9B%B7

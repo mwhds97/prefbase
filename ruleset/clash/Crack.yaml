@@ -1,49 +1,49 @@
 payload:
-  - PROCESS-NAME,3d toolkit.exe
-  - PROCESS-NAME,acrobat.exe
-  - PROCESS-NAME,acrobat.com.exe
-  - PROCESS-NAME,adobe dng converter.exe
-  - PROCESS-NAME,adobe encore.exe
-  - PROCESS-NAME,adobe encore dvd.exe
-  - PROCESS-NAME,adobe golive.exe
-  - PROCESS-NAME,adobe media encoder.exe
-  - PROCESS-NAME,adobe onlocation.exe
-  - PROCESS-NAME,adobe premiere elements.exe
-  - PROCESS-NAME,adobe premiere pro.exe
-  - PROCESS-NAME,adobe soundbooth.exe
-  - PROCESS-NAME,adobe stock photos.exe
-  - PROCESS-NAME,adobecaptivate.exe
-  - PROCESS-NAME,afterfx.exe
-  - PROCESS-NAME,audition.exe
-  - PROCESS-NAME,bridge.exe
-  - PROCESS-NAME,bridgeproxy.exe
-  - PROCESS-NAME,contribute.exe
-  - PROCESS-NAME,devicecentral.exe
-  - PROCESS-NAME,dreamweaver.exe
-  - PROCESS-NAME,dynamiclinkmanager.exe
-  - PROCESS-NAME,encore.exe
-  - PROCESS-NAME,fireworks.exe
-  - PROCESS-NAME,fireworks10.exe
-  - PROCESS-NAME,flash.exe
-  - PROCESS-NAME,flash video encoder.exe
-  - PROCESS-NAME,framemaker.exe
-  - PROCESS-NAME,golive.exe
-  - PROCESS-NAME,illustrator.exe
-  - PROCESS-NAME,imageready.exe
-  - PROCESS-NAME,incopy.exe
-  - PROCESS-NAME,indesign.exe
-  - PROCESS-NAME,lightroom.exe
-  - PROCESS-NAME,photoshop.exe
-  - PROCESS-NAME,photoshop elements.exe
-  - PROCESS-NAME,photoshopelementseditor.exe
-  - PROCESS-NAME,photoshopelementsorganizer.exe
-  - PROCESS-NAME,pipltool.exe
-  - PROCESS-NAME,pmreaderapp.exe
-  - PROCESS-NAME,premiere.exe
-  - PROCESS-NAME,robohelp.exe
-  - PROCESS-NAME,robohtml.exe
-  - PROCESS-NAME,adobe updater.exe
-  - PROCESS-NAME,adobeupdateinstallmgr.exe
-  - PROCESS-NAME,adobeupdatemanager.exe
-  - PROCESS-NAME,adobeupdater.exe
-  - PROCESS-NAME,adobeupdaterinstallmgr.exe
+- PROCESS-NAME,3d toolkit.exe
+- PROCESS-NAME,acrobat.exe
+- PROCESS-NAME,acrobat.com.exe
+- PROCESS-NAME,adobe dng converter.exe
+- PROCESS-NAME,adobe encore.exe
+- PROCESS-NAME,adobe encore dvd.exe
+- PROCESS-NAME,adobe golive.exe
+- PROCESS-NAME,adobe media encoder.exe
+- PROCESS-NAME,adobe onlocation.exe
+- PROCESS-NAME,adobe premiere elements.exe
+- PROCESS-NAME,adobe premiere pro.exe
+- PROCESS-NAME,adobe soundbooth.exe
+- PROCESS-NAME,adobe stock photos.exe
+- PROCESS-NAME,adobecaptivate.exe
+- PROCESS-NAME,afterfx.exe
+- PROCESS-NAME,audition.exe
+- PROCESS-NAME,bridge.exe
+- PROCESS-NAME,bridgeproxy.exe
+- PROCESS-NAME,contribute.exe
+- PROCESS-NAME,devicecentral.exe
+- PROCESS-NAME,dreamweaver.exe
+- PROCESS-NAME,dynamiclinkmanager.exe
+- PROCESS-NAME,encore.exe
+- PROCESS-NAME,fireworks.exe
+- PROCESS-NAME,fireworks10.exe
+- PROCESS-NAME,flash.exe
+- PROCESS-NAME,flash video encoder.exe
+- PROCESS-NAME,framemaker.exe
+- PROCESS-NAME,golive.exe
+- PROCESS-NAME,illustrator.exe
+- PROCESS-NAME,imageready.exe
+- PROCESS-NAME,incopy.exe
+- PROCESS-NAME,indesign.exe
+- PROCESS-NAME,lightroom.exe
+- PROCESS-NAME,photoshop.exe
+- PROCESS-NAME,photoshop elements.exe
+- PROCESS-NAME,photoshopelementseditor.exe
+- PROCESS-NAME,photoshopelementsorganizer.exe
+- PROCESS-NAME,pipltool.exe
+- PROCESS-NAME,pmreaderapp.exe
+- PROCESS-NAME,premiere.exe
+- PROCESS-NAME,robohelp.exe
+- PROCESS-NAME,robohtml.exe
+- PROCESS-NAME,adobe updater.exe
+- PROCESS-NAME,adobeupdateinstallmgr.exe
+- PROCESS-NAME,adobeupdatemanager.exe
+- PROCESS-NAME,adobeupdater.exe
+- PROCESS-NAME,adobeupdaterinstallmgr.exe

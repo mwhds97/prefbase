@@ -1,56 +1,46 @@
 payload:
-  # > Dler Cloud
-  - DOMAIN-SUFFIX,dler.cloud
+# > Dler Cloud
+- DOMAIN-SUFFIX,dler.cloud
 
-  # > Apple CDN
-  - PROCESS-NAME,storedownloadd
-  # - User-Agent,com.apple.appstored*
-  - DOMAIN,aod.itunes.apple.com
-  - DOMAIN,api.smoot.apple.cn
-  - DOMAIN,appldnld.apple.com
-  - DOMAIN,apptrailers.itunes.apple.com
-  - DOMAIN,gs-loc-cn.apple.com
-  - DOMAIN,iosapps.itunes.apple.com
-  - DOMAIN,music.apple.com
-  - DOMAIN,mvod.itunes.apple.com
-  - DOMAIN,osxapps.itunes.apple.com
-  - DOMAIN,supportdownload.apple.com
-  - DOMAIN,swcdn.apple.com
-  - DOMAIN,updates-http.cdn-apple.com
-  - DOMAIN-SUFFIX,ls.apple.com
-  - DOMAIN-SUFFIX,mzstatic.com
+# > Apple CDN
+- PROCESS-NAME,storedownloadd
+# - User-Agent,com.apple.appstored*
+- DOMAIN,aod.itunes.apple.com
+- DOMAIN,api.smoot.apple.cn
+- DOMAIN,appldnld.apple.com
+- DOMAIN,apptrailers.itunes.apple.com
+- DOMAIN,gs-loc-cn.apple.com
+- DOMAIN,iosapps.itunes.apple.com
+- DOMAIN,music.apple.com
+- DOMAIN,mvod.itunes.apple.com
+- DOMAIN,osxapps.itunes.apple.com
+- DOMAIN,supportdownload.apple.com
+- DOMAIN,swcdn.apple.com
+- DOMAIN,updates-http.cdn-apple.com
+- DOMAIN-SUFFIX,ls.apple.com
+- DOMAIN-SUFFIX,mzstatic.com
 
-  # > Google
-  - DOMAIN-KEYWORD,mtalk.google.com
-  - DOMAIN,safebrowsing.googleapis.com
-  - DOMAIN-SUFFIX,dl.google.com
+# > Google
+- DOMAIN,safebrowsing.googleapis.com
+- DOMAIN-SUFFIX,dl.google.com
 
-  # > Microsoft
-  # - USER-AGENT,Microsoft%20Remote%20Desktop*
-  - DOMAIN-SUFFIX,msftconnecttest.com
-  - DOMAIN-SUFFIX,windows.com
-  - DOMAIN-SUFFIX,windows.net
-  - DOMAIN-SUFFIX,windowsupdate.com
-  - DOMAIN-SUFFIX,xbox.com
-  - DOMAIN-SUFFIX,xboxlive.com
+# > Microsoft
+# - USER-AGENT,Microsoft%20Remote%20Desktop*
+- DOMAIN-SUFFIX,msftconnecttest.com
 
-  # > Mugglepay
-  - DOMAIN-SUFFIX,invoice.mugglepay.com
+# > Proxy plugin
+- PROCESS-NAME,v2ray
+- PROCESS-NAME,ss-local
 
-  # > Proxy plugin
-  - PROCESS-NAME,v2ray
-  - PROCESS-NAME,ss-local
+# > UUBooster
+- PROCESS-NAME,UUBooster
 
-  # > Tesla
-  - DOMAIN-SUFFIX,tesla.cn
-  - DOMAIN-SUFFIX,tesla-cdn.thron.cn
+# > WiFiman
+- DOMAIN-SUFFIX,app-measurement.com
 
-  # > UUBooster
-  - PROCESS-NAME,UUBooster
+# > Xunlei
+# - User-Agent,%E8%BF%85%E9%9B%B7
+- DOMAIN-SUFFIX,xunlei.com
 
-  # > Xunlei
-  # - User-Agent,%E8%BF%85%E9%9B%B7
-  - DOMAIN-SUFFIX,xunlei.com
-
-  - DOMAIN-SUFFIX,smtp
-  # - URL-REGEX,(Subject|HELO|SMTP)
+- DOMAIN-SUFFIX,smtp
+# - URL-REGEX,(Subject|HELO|SMTP)
