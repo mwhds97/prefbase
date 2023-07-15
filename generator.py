@@ -43,7 +43,6 @@ def level_type(node):
 filters = {
     "__Apple__": ".*",
     "__Blizzard__": ".*",
-    "__ChatGPT__": ".*",
     "__Crack__": ".*",
     "__Crypto__": ".*",
     "__Discord__": ".*",
@@ -57,6 +56,7 @@ filters = {
     "__Microsoft__": ".*",
     "__miHoYo__": ".*",
     "__Netflix__": ".*",
+    "__OpenAI__": ".*",
     "__Others__": ".*",
     "__PayPal__": ".*",
     "__Proxy__": ".*",

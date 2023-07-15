@@ -76,13 +76,6 @@ __Apple__
   - Proxy
   - REJECT
 __Blizzard__
-- name: ChatGPT
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__ChatGPT__
 - name: Crypto
   type: select
   proxies:
@@ -118,6 +111,13 @@ __Microsoft__
   - Proxy
   - REJECT
 __miHoYo__
+- name: OpenAI
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__OpenAI__
 - name: PayPal
   type: select
   proxies:
@@ -290,12 +290,6 @@ rule-providers:
     behavior: classical
     url: 'https://cdn.jsdelivr.net/gh/mwhds97/prefbase@master/ruleset/clash/Blizzard.yaml'
     path: ./Rules/Blizzard
-    interval: 86400
-  ChatGPT:
-    type: http
-    behavior: classical
-    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/ChatGPT.yaml'
-    path: ./Rules/ChatGPT
     interval: 86400
   # Crack:
   #   type: http
@@ -507,6 +501,12 @@ rule-providers:
     url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/Media/Niconico.yaml'
     path: ./Rules/Media/Niconico
     interval: 86400
+  OpenAI:
+    type: http
+    behavior: classical
+    url: 'https://raw.dler.io/dler-io/Rules/main/Clash/Provider/OpenAI.yaml'
+    path: ./Rules/OpenAI
+    interval: 86400
   Pandora:
     type: http
     behavior: classical
@@ -658,12 +658,12 @@ rules:
 - RULE-SET,Spam,Spam
 - RULE-SET,Apple,Apple
 - RULE-SET,Blizzard,Blizzard
-- RULE-SET,ChatGPT,ChatGPT
 - RULE-SET,Crypto,Crypto
 - RULE-SET,Discord,Discord
 - RULE-SET,Drive,Drive
 - RULE-SET,Microsoft,Microsoft
 - RULE-SET,miHoYo,miHoYo
+- RULE-SET,OpenAI,OpenAI
 - RULE-SET,PayPal,PayPal
 - RULE-SET,PT,PT
 - RULE-SET,Scholar,Scholar
@@ -737,12 +737,12 @@ script:
             "Spam": "Spam",
             "Apple": "Apple",
             "Blizzard": "Blizzard",
-            "ChatGPT": "ChatGPT",
             "Crypto": "Crypto",
             "Discord": "Discord",
             "Drive": "Drive",
             "Microsoft": "Microsoft",
             "miHoYo": "miHoYo",
+            "OpenAI": "OpenAI",
             "PayPal": "PayPal",
             "PT": "PT",
             "Scholar": "Scholar",
