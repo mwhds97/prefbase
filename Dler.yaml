@@ -1,4 +1,5 @@
 cfw-latency-timeout: 3000
+cfw-latency-type: 1
 cfw-latency-url: http://cp.cloudflare.com/generate_204
 clash-for-android:
   ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
