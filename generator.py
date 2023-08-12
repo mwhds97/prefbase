@@ -6,7 +6,7 @@ import yaml
 
 
 def level_region(node):
-    levels = {
+    LEVELS = {
         "香港": 9,
         "新加坡": 8,
         "日本": 7,
@@ -18,14 +18,14 @@ def level_region(node):
         "英国": 1,
     }
     info = node if isinstance(node, str) else node["name"]
-    for l in levels:
+    for l in LEVELS:
         if re.search(l, info) is not None:
-            return levels[l]
+            return LEVELS[l]
     return 0
 
 
 def level_type(node):
-    levels = {
+    LEVELS = {
         " (AC|HA)": 6,
         " IEPL.*Premium": 5,
         " IEPL.*Std": 4,
@@ -34,13 +34,13 @@ def level_type(node):
         " GIA": 1,
     }
     info = node if isinstance(node, str) else node["name"]
-    for l in levels:
+    for l in LEVELS:
         if re.search(l, info) is not None:
-            return levels[l]
+            return LEVELS[l]
     return 0
 
 
-filters = {
+FILTERS = {
     "__Apple__": ".*",
     "__Blizzard__": ".*",
     "__Crack__": ".*",
@@ -91,10 +91,10 @@ clash_nodes = (
     .rstrip()
 )
 clash_remarks = {}
-for f in filters:
+for f in FILTERS:
     clash_remarks[f] = ""
     for p in clash_list["proxies"]:
-        if re.search(filters[f], p["name"]) is not None:
+        if re.search(FILTERS[f], p["name"]) is not None:
             clash_remarks[f] += "  - " + p["name"] + "\n"
     clash_remarks[f] = clash_remarks[f].rstrip()
 with open("Dler.yaml", "r+", encoding="utf-8", newline="\n") as f:
@@ -113,12 +113,12 @@ surge_list.sort(key=level_type, reverse=True)
 surge_nodes = ""
 for l in surge_list:
     surge_nodes += l
-surge_nodes = surge_nodes.rstrip()
+surge_nodes = surge_nodes.replace(", ", ",").rstrip()
 surge_remarks = {}
-for f in filters:
+for f in FILTERS:
     surge_remarks[f] = ""
     for l in surge_list:
-        if re.search(filters[f], l) is not None:
+        if re.search(FILTERS[f], l) is not None:
             surge_remarks[f] += "," + re.match(r"^(.*?) =", l).group(1)
 with open("Dler.conf", "r+", encoding="utf-8", newline="\n") as f:
     surge_conf = f.read()
