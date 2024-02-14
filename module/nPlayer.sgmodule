@@ -1,0 +1,9 @@
+#!name=nPlayer
+#!desc=禁止nPlayer搜刮
+
+[Rule]
+AND,((USER-AGENT,nPlayer*),(DOMAIN-SUFFIX,api.themoviedb.org)),REJECT
+AND,((USER-AGENT,nPlayer*),(DOMAIN-SUFFIX,image.tmdb.org)),REJECT
+
+[MITM]
+hostmame = %APPEND% api.themoviedb.org,image.tmdb.org
