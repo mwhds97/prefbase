@@ -26,12 +26,12 @@ def level_region(node):
 
 def level_type(node):
     LEVELS = {
-        " (AC|HA)": 6,
-        " IEPL.*Premium": 5,
-        " IEPL.*Std": 4,
-        " IEPL.*Air": 3,
-        " OCTO": 2,
-        " GIA": 1,
+        " HA": 6,
+        " AC": 5,
+        " IEPL.*Ult": 4,
+        " IEPL.*Pr": 3,
+        " IEPL.*Std": 2,
+        " IEPL.*Air": 1,
     }
     info = node if isinstance(node, str) else node["name"]
     for l in LEVELS:
