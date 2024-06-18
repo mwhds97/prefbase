@@ -1,5 +1,5 @@
-#!name=IPv6
-#!desc=开启IPv6
+#!name=Disable IPv6
+#!desc=关闭IPv6
 
 [General]
-ipv6 = true
+ipv6 = false
