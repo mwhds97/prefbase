@@ -41,6 +41,7 @@ def level_type(node):
 
 
 FILTERS = {
+    "__AISuite__": ".*",
     "__Apple__": ".*",
     "__Blizzard__": ".*",
     "__Crack__": ".*",
@@ -56,7 +57,6 @@ FILTERS = {
     "__Microsoft__": ".*",
     "__miHoYo__": ".*",
     "__Netflix__": ".*",
-    "__OpenAI__": ".*",
     "__Others__": ".*",
     "__PayPal__": ".*",
     "__Proxy__": ".*",

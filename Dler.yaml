@@ -63,6 +63,13 @@ __Spam__
   - Proxy
   - REJECT
 __Special__
+- name: AISuite
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__AISuite__
 - name: Apple
   type: select
   proxies:
@@ -112,13 +119,6 @@ __Microsoft__
   - Proxy
   - REJECT
 __miHoYo__
-- name: OpenAI
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__OpenAI__
 - name: PayPal
   type: select
   proxies:
@@ -237,6 +237,12 @@ rule-providers:
     behavior: classical
     url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Abema%20TV.yaml'
     path: ./Rules/Media/Abema_TV
+    interval: 86400
+  AISuite:
+    type: http
+    behavior: classical
+    url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/AI%20Suite.yaml'
+    path: ./Rules/AISuite
     interval: 86400
   Amazon:
     type: http
@@ -502,12 +508,6 @@ rule-providers:
     url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Niconico.yaml'
     path: ./Rules/Media/Niconico
     interval: 86400
-  OpenAI:
-    type: http
-    behavior: classical
-    url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/OpenAI.yaml'
-    path: ./Rules/OpenAI
-    interval: 86400
   Pandora:
     type: http
     behavior: classical
@@ -657,6 +657,7 @@ rules:
 - RULE-SET,Special,Special
 # - RULE-SET,Downloader,Downloader
 - RULE-SET,Spam,Spam
+- RULE-SET,AISuite,AISuite
 - RULE-SET,Apple,Apple
 - RULE-SET,Blizzard,Blizzard
 - RULE-SET,Crypto,Crypto
@@ -664,7 +665,6 @@ rules:
 - RULE-SET,Drive,Drive
 - RULE-SET,Microsoft,Microsoft
 - RULE-SET,miHoYo,miHoYo
-- RULE-SET,OpenAI,OpenAI
 - RULE-SET,PayPal,PayPal
 - RULE-SET,PT,PT
 - RULE-SET,Scholar,Scholar
@@ -736,6 +736,7 @@ script:
             "Special": "Special",
             # "Downloader": "Downloader",
             "Spam": "Spam",
+            "AISuite": "AISuite",
             "Apple": "Apple",
             "Blizzard": "Blizzard",
             "Crypto": "Crypto",
@@ -743,7 +744,6 @@ script:
             "Drive": "Drive",
             "Microsoft": "Microsoft",
             "miHoYo": "miHoYo",
-            "OpenAI": "OpenAI",
             "PayPal": "PayPal",
             "PT": "PT",
             "Scholar": "Scholar",
