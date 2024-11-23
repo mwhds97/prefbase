@@ -388,18 +388,6 @@ rule-providers:
     url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Fox%2B.yaml'
     path: ./Rules/Media/Fox+
     interval: 86400
-  HBO Go:
-    type: http
-    behavior: classical
-    url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/HBO%20Go.yaml'
-    path: ./Rules/Media/HBO_Go
-    interval: 86400
-  HBO Max:
-    type: http
-    behavior: classical
-    url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/HBO%20Max.yaml'
-    path: ./Rules/Media/HBO_Max
-    interval: 86400
   Hulu:
     type: http
     behavior: classical
@@ -465,6 +453,12 @@ rule-providers:
     behavior: classical
     url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Line%20TV.yaml'
     path: ./Rules/Media/Line_TV
+    interval: 86400
+  Max:
+    type: http
+    behavior: classical
+    url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Max.yaml'
+    path: ./Rules/Media/Max
     interval: 86400
   Microsoft:
     type: http
@@ -700,8 +694,6 @@ rules:
 - RULE-SET,F1 TV,GlobalTV
 - RULE-SET,Fox Now,GlobalTV
 - RULE-SET,Fox+,GlobalTV
-- RULE-SET,HBO Go,GlobalTV
-- RULE-SET,HBO Max,GlobalTV
 - RULE-SET,Hulu,GlobalTV
 - RULE-SET,Hulu Japan,GlobalTV
 - RULE-SET,Japonx,GlobalTV
@@ -709,6 +701,7 @@ rules:
 - RULE-SET,KKBOX,GlobalTV
 - RULE-SET,KKTV,GlobalTV
 - RULE-SET,Line TV,GlobalTV
+- RULE-SET,Max,GlobalTV
 - RULE-SET,myTV SUPER,GlobalTV
 - RULE-SET,Niconico,GlobalTV
 - RULE-SET,Pandora,GlobalTV
@@ -777,8 +770,6 @@ script:
             "F1 TV": "GlobalTV",
             "Fox Now": "GlobalTV",
             "Fox+": "GlobalTV",
-            "HBO Go": "GlobalTV",
-            "HBO Max": "GlobalTV",
             "Hulu": "GlobalTV",
             "Hulu Japan": "GlobalTV",
             "Japonx": "GlobalTV",
@@ -786,6 +777,7 @@ script:
             "KKBOX": "GlobalTV",
             "KKTV": "GlobalTV",
             "Line TV": "GlobalTV",
+            "Max": "GlobalTV",
             "myTV SUPER": "GlobalTV",
             "Niconico": "GlobalTV",
             "Pandora": "GlobalTV",
