@@ -35,13 +35,13 @@ __TopBlocked__
   - Proxy
   - REJECT
 __Domestic__
-- name: Spam
-  type: select
-  proxies:
-  - REJECT
-  - DIRECT
-  - Proxy
-__Spam__
+# - name: Spam
+#   type: select
+#   proxies:
+#   - REJECT
+#   - DIRECT
+#   - Proxy
+# Spam
 # - name: Crack
 #   type: select
 #   proxies:
@@ -472,12 +472,12 @@ rule-providers:
     url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/miHoYo.yaml'
     path: ./Rules/miHoYo
     interval: 86400
-  # MOO:
-  #   type: http
-  #   behavior: classical
-  #   url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/MOO.yaml'
-  #   path: ./Rules/Media/MOO
-  #   interval: 86400
+  MOO:
+    type: http
+    behavior: classical
+    url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/MOO.yaml'
+    path: ./Rules/Media/MOO
+    interval: 86400
   myTV SUPER:
     type: http
     behavior: classical
@@ -556,12 +556,12 @@ rule-providers:
     url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Soundcloud.yaml'
     path: ./Rules/Media/Soundcloud
     interval: 86400
-  Spam:
-    type: http
-    behavior: domain
-    url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml'
-    path: ./Rules/Spam
-    interval: 86400
+  # Spam:
+  #   type: http
+  #   behavior: domain
+  #   url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml'
+  #   path: ./Rules/Spam
+  #   interval: 86400
   Special:
     type: http
     behavior: classical
@@ -628,12 +628,12 @@ rule-providers:
     url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube.yaml'
     path: ./Rules/Media/YouTube
     interval: 86400
-  # YouTube Music:
-  #   type: http
-  #   behavior: classical
-  #   url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube%20Music.yaml'
-  #   path: ./Rules/Media/YouTube_Music
-  #   interval: 86400
+  YouTube Music:
+    type: http
+    behavior: classical
+    url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube%20Music.yaml'
+    path: ./Rules/Media/YouTube_Music
+    interval: 86400
   Youku:
     type: http
     behavior: classical
@@ -650,7 +650,7 @@ rules:
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Special,Special
 # - RULE-SET,Downloader,Downloader
-- RULE-SET,Spam,Spam
+# - RULE-SET,Spam,Spam
 - RULE-SET,AISuite,AISuite
 - RULE-SET,Apple,Apple
 - RULE-SET,Blizzard,Blizzard
@@ -670,12 +670,12 @@ rules:
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
 - RULE-SET,YouTube,YouTube
-# - RULE-SET,YouTube Music,YouTube
+- RULE-SET,YouTube Music,YouTube
 - RULE-SET,Bilibili,DomesticTV
 - RULE-SET,IQ,DomesticTV
 - RULE-SET,IQIYI,DomesticTV
 - RULE-SET,Letv,DomesticTV
-# - RULE-SET,MOO,DomesticTV
+- RULE-SET,MOO,DomesticTV
 - RULE-SET,Netease Music,DomesticTV
 - RULE-SET,Tencent Video,DomesticTV
 - RULE-SET,WeTV,DomesticTV
@@ -728,7 +728,7 @@ script:
             "Proxy": "Proxy",
             "Special": "Special",
             # "Downloader": "Downloader",
-            "Spam": "Spam",
+            # "Spam": "Spam",
             "AISuite": "AISuite",
             "Apple": "Apple",
             "Blizzard": "Blizzard",
@@ -748,10 +748,12 @@ script:
             "Netflix": "Netflix",
             "Spotify": "Spotify",
             "YouTube": "YouTube",
+            "YouTube Music": "YouTube",
             "Bilibili": "DomesticTV",
             "IQ": "DomesticTV",
             "IQIYI": "DomesticTV",
             "Letv": "DomesticTV",
+            "MOO": "DomesticTV",
             "Netease Music": "DomesticTV",
             "Tencent Video": "DomesticTV",
             "WeTV": "DomesticTV",
