@@ -472,12 +472,12 @@ rule-providers:
     url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/miHoYo.yaml'
     path: ./Rules/miHoYo
     interval: 86400
-  MOO:
-    type: http
-    behavior: classical
-    url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/MOO.yaml'
-    path: ./Rules/Media/MOO
-    interval: 86400
+  # MOO:
+  #   type: http
+  #   behavior: classical
+  #   url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/MOO.yaml'
+  #   path: ./Rules/Media/MOO
+  #   interval: 86400
   myTV SUPER:
     type: http
     behavior: classical
@@ -675,7 +675,7 @@ rules:
 - RULE-SET,IQ,DomesticTV
 - RULE-SET,IQIYI,DomesticTV
 - RULE-SET,Letv,DomesticTV
-- RULE-SET,MOO,DomesticTV
+# - RULE-SET,MOO,DomesticTV
 - RULE-SET,Netease Music,DomesticTV
 - RULE-SET,Tencent Video,DomesticTV
 - RULE-SET,WeTV,DomesticTV
@@ -753,7 +753,7 @@ script:
             "IQ": "DomesticTV",
             "IQIYI": "DomesticTV",
             "Letv": "DomesticTV",
-            "MOO": "DomesticTV",
+            # "MOO": "DomesticTV",
             "Netease Music": "DomesticTV",
             "Tencent Video": "DomesticTV",
             "WeTV": "DomesticTV",
