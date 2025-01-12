@@ -838,3 +838,10 @@ script:
             if code == "CN":
                 return "Domestic"
         return "Others"
+
+tunnels:
+- network:
+  - tcp
+  address: 127.8.8.8:443
+  target: translate.googleapis.com:443
+  proxy: Proxy
