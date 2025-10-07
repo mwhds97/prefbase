@@ -1,16 +1,183 @@
-cfw-latency-timeout: 3000
-cfw-latency-type: 1
-cfw-latency-url: http://cp.cloudflare.com/generate_204
-clash-for-android:
-  ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
 external-controller: 0.0.0.0:6170
-ipv6: true
-log-level: info
-mixed-port: 7890
-mode: rule
-port: 7891
+external-ui: ui
+external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
+external-controller-cors:
+  allow-origins:
+  - https://metacubex.github.io
+  - https://board.zash.run.place
+  allow-private-network: true
 secret: ted423
+ipv6: true
+mode: rule
+mixed-port: 7890
 socks-port: 7892
+port: 7891
+redir-port: 0
+tproxy-port: 0
+allow-lan: true
+unified-delay: false
+tcp-concurrent: false
+log-level: info
+find-process-mode: always
+bind-address: "*"
+lan-allowed-ips:
+- 0.0.0.0/0
+- ::/0
+lan-disallowed-ips: []
+authentication: []
+skip-auth-prefixes:
+- 127.0.0.1/32
+tun:
+  enable: false
+  device: Clash
+  stack: system
+  auto-route: true
+  auto-redirect: false
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+  route-exclude-address: []
+  mtu: 9000
+  strict-route: false
+  disable-icmp-forwarding: false
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "*.10099.com.cn"
+  - "*.126.net"
+  - "*.blzstatic.cn"
+  - "*.cmbchina.com"
+  - "*.cmpassport.com"
+  - "*.direct"
+  - "*.home.arpa"
+  - "*.icitymobile.mobi"
+  - "*.jegotrip.com.cn"
+  - "*.kuwo.cn"
+  - "*.lan"
+  - "*.linksys.com"
+  - "*.localdomain"
+  - "*.localhost"
+  - "*.logon.battle.net"
+  - "*.logon.battlenet.com.cn"
+  - "*.mcdn.bilivideo.cn"
+  - "*.microdone.cn"
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - "*.music.163.com"
+  - "*.music.migu.cn"
+  - "*.ntp.org.cn"
+  - "*.pingan.com.cn"
+  - "*.pool.ntp.org"
+  - "*.srv.nintendo.net"
+  - "*.stun.playstation.net"
+  - "*.wosms.cn"
+  - "*.xboxlive.com"
+  - "*.xiami.com"
+  - "*.y.qq.com"
+  - amobile.music.tc.qq.com
+  - api.joox.com
+  - api-jooxtt.sanook.com
+  - app.yinxiang.com
+  - aqqmusic.tc.qq.com
+  - cable.auth.com
+  - DC._msDCS.*.*
+  - detectportal.firefox.com
+  - dl.stream.qqmusic.qq.com
+  - enrichgw.10010.com
+  - GC._msDCS.*.*
+  - global.stun.twilio.com
+  - global.turn.twilio.com
+  - hmrz.wo.cn
+  - id.mail.wo.cn
+  - id6.me
+  - injections.adguard.org
+  - isure.stream.qqmusic.qq.com
+  - joox.com
+  - local.adguard.org
+  - localhost.*.qq.com
+  - localhost.*.weixin.qq.com
+  - localhost.ptlogin2.qq.com
+  - mdn.open.wo.cn
+  - mobileoc.music.tc.qq.com
+  - music.163.com
+  - music.migu.cn
+  - music.taihe.com
+  - musicapi.taihe.com
+  - network-test.debian.org
+  - nishub?.10010.com
+  - ntp.*.com
+  - ntp?.*.com
+  - open.e.189.cn
+  - opencloud.wostore.cn
+  - PDC._msDCS.*.*
+  - pool.ntp.org
+  - proxy.golang.org
+  - resolver?.opendns.com
+  - songsearch.kugou.com
+  - streamoc.music.tc.qq.com
+  - stun.*
+  - stun.*.*.*
+  - time.*.apple.com
+  - time.*.com
+  - time.*.edu.cn
+  - time.*.gov
+  - time?.*.com
+  - time?.cloud.tencent.com
+  - trackercdn.kugou.com
+  - xbox.*.microsoft.com
+  - y.qq.com
+  use-hosts: false
+  use-system-hosts: true
+  default-nameserver:
+  - system
+  nameserver:
+  - 119.29.29.29
+  - 114.114.114.114
+  proxy-server-nameserver: []
+  direct-nameserver: []
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  force-dns-mapping: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports:
+      - 80
+      - 443
+      override-destination: false
+    TLS:
+      ports:
+      - 443
+  skip-domain:
+  - +.push.apple.com
+  skip-dst-address:
+  - 91.105.192.0/23
+  - 91.108.4.0/22
+  - 91.108.8.0/21
+  - 91.108.16.0/21
+  - 91.108.56.0/22
+  - 95.161.64.0/20
+  - 149.154.160.0/20
+  - 185.76.151.0/24
+  - 2001:67c:4e8::/48
+  - 2001:b28:f23c::/47
+  - 2001:b28:f23f::/48
+  - 2a0a:f280:203::/48
+profile:
+  store-selected: true
+  store-fake-ip: true
+geo-auto-update: true
+geo-update-interval: 720
+geodata-mode: false
+geox-url:
+  geoip: https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/refs/heads/release/Country.mmdb
+  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
+  mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
+  asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
 
 __nodes__
 
@@ -18,9 +185,9 @@ proxy-groups:
 - name: Proxy
   type: select
   proxies:
+__Proxy__
   - DIRECT
   - REJECT
-__Proxy__
 - name: TopBlocked
   type: select
   proxies:
@@ -229,420 +396,488 @@ rule-providers:
   ABC:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/ABC.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/ABC.yaml'
     path: ./Rules/Media/ABC
     interval: 86400
+    proxy: Proxy
   Abema TV:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Abema%20TV.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Abema%20TV.yaml'
     path: ./Rules/Media/Abema_TV
     interval: 86400
+    proxy: Proxy
   AISuite:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/AI%20Suite.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/AI%20Suite.yaml'
     path: ./Rules/AISuite
     interval: 86400
+    proxy: Proxy
   Amazon:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Amazon.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Amazon.yaml'
     path: ./Rules/Media/Amazon
     interval: 86400
+    proxy: Proxy
   Apple:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Apple.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Apple.yaml'
     path: ./Rules/Apple
     interval: 86400
+    proxy: Proxy
   Apple Music:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Apple%20Music.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Apple%20Music.yaml'
     path: ./Rules/Media/Apple_Music
     interval: 86400
+    proxy: Proxy
   Apple News:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Apple%20News.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Apple%20News.yaml'
     path: ./Rules/Media/Apple_News
     interval: 86400
+    proxy: Proxy
   Apple TV:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Apple%20TV.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Apple%20TV.yaml'
     path: ./Rules/Media/Apple_TV
     interval: 86400
+    proxy: Proxy
   Bahamut:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Bahamut.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Bahamut.yaml'
     path: ./Rules/Media/Bahamut
     interval: 86400
+    proxy: Proxy
   BBC iPlayer:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/BBC%20iPlayer.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/BBC%20iPlayer.yaml'
     path: ./Rules/Media/BBC_iPlayer
     interval: 86400
+    proxy: Proxy
   Bilibili:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Bilibili.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Bilibili.yaml'
     path: ./Rules/Media/Bilibili
     interval: 86400
+    proxy: Proxy
   Blizzard:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Blizzard.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Blizzard.yaml'
     path: ./Rules/Blizzard
     interval: 86400
+    proxy: Proxy
   # Crack:
   #   type: http
   #   behavior: classical
-  #   url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Crack.yaml'
+  #   url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Crack.yaml'
   #   path: ./Rules/Crack
   #   interval: 86400
+  #   proxy: Proxy
   Crypto:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Crypto.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Crypto.yaml'
     path: ./Rules/Crypto
     interval: 86400
+    proxy: Proxy
   DAZN:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/DAZN.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/DAZN.yaml'
     path: ./Rules/Media/DAZN
     interval: 86400
+    proxy: Proxy
   Direct:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Direct.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Direct.yaml'
     path: ./Rules/Direct
     interval: 86400
+    proxy: Proxy
   Discord:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Discord.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Discord.yaml'
     path: ./Rules/Discord
     interval: 86400
+    proxy: Proxy
   Discovery Plus:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Discovery%20Plus.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Discovery%20Plus.yaml'
     path: ./Rules/Media/Discovery_Plus
     interval: 86400
+    proxy: Proxy
   Disney Plus:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Disney%20Plus.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Disney%20Plus.yaml'
     path: ./Rules/Media/Disney_Plus
     interval: 86400
+    proxy: Proxy
   Domestic:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Domestic.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Domestic.yaml'
     path: ./Rules/Domestic
     interval: 86400
+    proxy: Proxy
   Douyin:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Douyin.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Douyin.yaml'
     path: ./Rules/Douyin
     interval: 86400
+    proxy: Proxy
   # Downloader:
   #   type: http
   #   behavior: classical
-  #   url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Downloader.yaml'
+  #   url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Downloader.yaml'
   #   path: ./Rules/Downloader
   #   interval: 86400
+  #   proxy: Proxy
   Drive:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Drive.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Drive.yaml'
     path: ./Rules/Drive
     interval: 86400
+    proxy: Proxy
   encoreTVB:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/encoreTVB.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/encoreTVB.yaml'
     path: ./Rules/Media/encoreTVB
     interval: 86400
+    proxy: Proxy
   F1 TV:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/F1%20TV.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/F1%20TV.yaml'
     path: ./Rules/Media/F1_TV
     interval: 86400
+    proxy: Proxy
   Fox Now:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Fox%20Now.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Fox%20Now.yaml'
     path: ./Rules/Media/Fox_Now
     interval: 86400
+    proxy: Proxy
   Fox+:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Fox%2B.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Fox%2B.yaml'
     path: ./Rules/Media/Fox+
     interval: 86400
+    proxy: Proxy
   Hulu:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Hulu.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Hulu.yaml'
     path: ./Rules/Media/Hulu
     interval: 86400
+    proxy: Proxy
   Hulu Japan:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Hulu%20Japan.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Hulu%20Japan.yaml'
     path: ./Rules/Media/Hulu_Japan
     interval: 86400
+    proxy: Proxy
   IQ:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQ.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQ.yaml'
     path: ./Rules/Media/IQ
     interval: 86400
+    proxy: Proxy
   IQIYI:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQIYI.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/IQIYI.yaml'
     path: ./Rules/Media/IQIYI
     interval: 86400
+    proxy: Proxy
   Japonx:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Japonx.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Japonx.yaml'
     path: ./Rules/Media/Japonx
     interval: 86400
+    proxy: Proxy
   JOOX:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/JOOX.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/JOOX.yaml'
     path: ./Rules/Media/JOOX
     interval: 86400
+    proxy: Proxy
   KKBOX:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/KKBOX.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/KKBOX.yaml'
     path: ./Rules/Media/KKBOX
     interval: 86400
+    proxy: Proxy
   KKTV:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/KKTV.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/KKTV.yaml'
     path: ./Rules/Media/KKTV
     interval: 86400
+    proxy: Proxy
   LAN:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/LAN.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/LAN.yaml'
     path: ./Rules/LAN
     interval: 86400
+    proxy: Proxy
   Letv:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Letv.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Letv.yaml'
     path: ./Rules/Media/Letv
     interval: 86400
+    proxy: Proxy
   Line TV:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Line%20TV.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Line%20TV.yaml'
     path: ./Rules/Media/Line_TV
     interval: 86400
+    proxy: Proxy
   Max:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Max.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Max.yaml'
     path: ./Rules/Media/Max
     interval: 86400
+    proxy: Proxy
   Microsoft:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Microsoft.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Microsoft.yaml'
     path: ./Rules/Microsoft
     interval: 86400
+    proxy: Proxy
   miHoYo:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/miHoYo.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/miHoYo.yaml'
     path: ./Rules/miHoYo
     interval: 86400
+    proxy: Proxy
   # MOO:
   #   type: http
   #   behavior: classical
-  #   url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/MOO.yaml'
+  #   url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/MOO.yaml'
   #   path: ./Rules/Media/MOO
   #   interval: 86400
+  #   proxy: Proxy
   myTV SUPER:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/myTV%20SUPER.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/myTV%20SUPER.yaml'
     path: ./Rules/Media/myTV_SUPER
     interval: 86400
+    proxy: Proxy
   Netease Music:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netease%20Music.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netease%20Music.yaml'
     path: ./Rules/Media/Netease_Music
     interval: 86400
+    proxy: Proxy
   Netflix:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netflix.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netflix.yaml'
     path: ./Rules/Media/Netflix
     interval: 86400
+    proxy: Proxy
   Niconico:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Niconico.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Niconico.yaml'
     path: ./Rules/Media/Niconico
     interval: 86400
+    proxy: Proxy
   Pandora:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Pandora.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Pandora.yaml'
     path: ./Rules/Media/Pandora
     interval: 86400
+    proxy: Proxy
   PayPal:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/PayPal.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/PayPal.yaml'
     path: ./Rules/PayPal
     interval: 86400
+    proxy: Proxy
   PBS:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/PBS.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/PBS.yaml'
     path: ./Rules/Media/PBS
     interval: 86400
+    proxy: Proxy
   Pornhub:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Pornhub.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Pornhub.yaml'
     path: ./Rules/Media/Pornhub
     interval: 86400
+    proxy: Proxy
   Proxy:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Proxy.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Proxy.yaml'
     path: ./Rules/Proxy
     interval: 86400
+    proxy: Proxy
   PT:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/PT.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/PT.yaml'
     path: ./Rules/PT
     interval: 86400
+    proxy: Proxy
   Reject:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Reject.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Reject.yaml'
     path: ./Rules/Reject
     interval: 86400
+    proxy: Proxy
   Scholar:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Scholar.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Scholar.yaml'
     path: ./Rules/Scholar
     interval: 86400
+    proxy: Proxy
   Soundcloud:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Soundcloud.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Soundcloud.yaml'
     path: ./Rules/Media/Soundcloud
     interval: 86400
+    proxy: Proxy
   # Spam:
   #   type: http
   #   behavior: domain
-  #   url: 'https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml'
+  #   url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml'
   #   path: ./Rules/Spam
   #   interval: 86400
+  #   proxy: Proxy
   Special:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Special.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Special.yaml'
     path: ./Rules/Special
     interval: 86400
+    proxy: Proxy
   Speedtest:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Speedtest.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Speedtest.yaml'
     path: ./Rules/Speedtest
     interval: 86400
+    proxy: Proxy
   Spotify:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Spotify.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Spotify.yaml'
     path: ./Rules/Media/Spotify
     interval: 86400
+    proxy: Proxy
   SSH:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/SSH.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/SSH.yaml'
     path: ./Rules/SSH
     interval: 86400
+    proxy: Proxy
   Steam:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Steam.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Steam.yaml'
     path: ./Rules/Steam
     interval: 86400
+    proxy: Proxy
   Telegram:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Telegram.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Telegram.yaml'
     path: ./Rules/Telegram
     interval: 86400
+    proxy: Proxy
   Tencent Video:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Tencent%20Video.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Tencent%20Video.yaml'
     path: ./Rules/Media/Tencent_Video
     interval: 86400
+    proxy: Proxy
   TopBlocked:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Proxy.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Proxy.yaml'
     path: ./Rules/TopBlocked
     interval: 86400
+    proxy: Proxy
   ViuTV:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/ViuTV.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/ViuTV.yaml'
     path: ./Rules/Media/ViuTV
     interval: 86400
+    proxy: Proxy
   WeTV:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/WeTV.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/WeTV.yaml'
     path: ./Rules/Media/WeTV
     interval: 86400
+    proxy: Proxy
   YouTube:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube.yaml'
     path: ./Rules/Media/YouTube
     interval: 86400
+    proxy: Proxy
   YouTube Music:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube%20Music.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/YouTube%20Music.yaml'
     path: ./Rules/Media/YouTube_Music
     interval: 86400
+    proxy: Proxy
   Youku:
     type: http
     behavior: classical
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Youku.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Youku.yaml'
     path: ./Rules/Media/Youku
     interval: 86400
+    proxy: Proxy
 
 rules:
-- SCRIPT,BLOCK_QUIC,REJECT
 - RULE-SET,Reject,REJECT
 # - RULE-SET,Crack,Crack
 - RULE-SET,SSH,SSH
@@ -715,9 +950,14 @@ rules:
 - GEOIP,CN,Domestic
 - MATCH,Others
 
+tunnels:
+- network:
+  - tcp
+  address: 127.8.8.8:443
+  target: translate.googleapis.com:443
+  proxy: Proxy
+
 script:
-  shortcuts:
-    BLOCK_QUIC: 'network == "udp" and dst_port == 443'
   code: |
     def main(ctx, metadata):
         ruleset_action = {
@@ -791,8 +1031,6 @@ script:
             "Domestic": "Domestic",
             "LAN": "DIRECT",
         }
-        if metadata["network"] == "udp" and metadata["dst_port"] == "443":
-            return "REJECT"
         port_list = [
             "21",
             "22",
@@ -838,10 +1076,3 @@ script:
             if code == "CN":
                 return "Domestic"
         return "Others"
-
-tunnels:
-- network:
-  - tcp
-  address: 127.8.8.8:443
-  target: translate.googleapis.com:443
-  proxy: Proxy
