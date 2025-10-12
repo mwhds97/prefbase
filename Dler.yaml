@@ -979,13 +979,6 @@ rules:
 - GEOIP,CN,Domestic
 - MATCH,Others
 
-tunnels:
-- network:
-  - tcp
-  address: 127.8.8.8:443
-  target: translate.googleapis.com:443
-  proxy: Proxy
-
 script:
   code: |
     def main(ctx, metadata):
