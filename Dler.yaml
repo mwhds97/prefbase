@@ -148,10 +148,16 @@ sniffer:
       ports:
       - 80
       - 443
+      - 8443
       override-destination: false
     TLS:
       ports:
       - 443
+      - 8443
+    QUIC:
+      ports:
+      - 443
+      - 8443
   skip-domain:
   - +.push.apple.com
   skip-dst-address:
@@ -363,6 +369,13 @@ __Netflix__
   - DIRECT
   - REJECT
 __Spotify__
+- name: TikTok
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__TikTok__
 - name: YouTube
   type: select
   proxies:
@@ -424,7 +437,7 @@ rule-providers:
   Apple:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Apple.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Apple.yaml'
     path: ./Rules/Apple
     interval: 86400
     proxy: Proxy
@@ -524,6 +537,13 @@ rule-providers:
     behavior: classical
     url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Disney%20Plus.yaml'
     path: ./Rules/Media/Disney_Plus
+    interval: 86400
+    proxy: Proxy
+  DMM:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/DMM.yaml'
+    path: ./Rules/Media/DMM
     interval: 86400
     proxy: Proxy
   Domestic:
@@ -834,6 +854,13 @@ rule-providers:
     path: ./Rules/Media/Tencent_Video
     interval: 86400
     proxy: Proxy
+  TikTok:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/TikTok.yaml'
+    path: ./Rules/TikTok
+    interval: 86400
+    proxy: Proxy
   TopBlocked:
     type: http
     behavior: classical
@@ -904,6 +931,7 @@ rules:
 - RULE-SET,Douyin,Douyin
 - RULE-SET,Netflix,Netflix
 - RULE-SET,Spotify,Spotify
+- RULE-SET,TikTok,TikTok
 - RULE-SET,YouTube,YouTube
 - RULE-SET,YouTube Music,YouTube
 - RULE-SET,Bilibili,DomesticTV
@@ -925,6 +953,7 @@ rules:
 - RULE-SET,BBC iPlayer,GlobalTV
 - RULE-SET,DAZN,GlobalTV
 - RULE-SET,Discovery Plus,GlobalTV
+- RULE-SET,DMM,GlobalTV
 - RULE-SET,encoreTVB,GlobalTV
 - RULE-SET,F1 TV,GlobalTV
 - RULE-SET,Fox Now,GlobalTV
@@ -987,6 +1016,7 @@ script:
             "Douyin": "Douyin",
             "Netflix": "Netflix",
             "Spotify": "Spotify",
+            "TikTok": "TikTok",
             "YouTube": "YouTube",
             "YouTube Music": "YouTube",
             "Bilibili": "DomesticTV",
@@ -1008,6 +1038,7 @@ script:
             "BBC iPlayer": "GlobalTV",
             "DAZN": "GlobalTV",
             "Discovery Plus": "GlobalTV",
+            "DMM": "GlobalTV",
             "encoreTVB": "GlobalTV",
             "F1 TV": "GlobalTV",
             "Fox Now": "GlobalTV",

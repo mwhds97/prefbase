@@ -10,11 +10,11 @@ def level_region(node):
         "香港": 9,
         "新加坡": 8,
         "日本": 7,
-        "美国": 6,
-        "台湾": 5,
-        "韩国": 4,
-        "俄罗斯": 3,
-        "德国": 2,
+        "德国": 6,
+        "美国": 5,
+        "台湾": 4,
+        "韩国": 3,
+        "俄罗斯": 2,
         "英国": 1,
     }
     info = node if isinstance(node, str) else node["name"]
@@ -26,12 +26,13 @@ def level_region(node):
 
 def level_type(node):
     LEVELS = {
-        " IEPL.*HA": 6,
-        " IEPL.*(AC|Ma)": 5,
-        " IEPL.*(Ul|Pl)": 4,
-        " IEPL.*Pr": 3,
-        " IEPL.*St": 2,
-        " IEPL.*Ai": 1,
+        " IEPL.*IX": 7,
+        " IEPL.*(AC|Ma|BG)": 6,
+        " IEPL.*(Ul|Pl)": 5,
+        " IEPL.*Pr": 4,
+        " IEPL.*St": 3,
+        " IEPL.*Ai": 2,
+        " OCTO": 1,
     }
     info = node if isinstance(node, str) else node["name"]
     for l in LEVELS:
@@ -69,6 +70,7 @@ FILTERS = {
     "__SSH__": ".*",
     "__Steam__": ".*",
     "__Telegram__": ".*",
+    "__TikTok__": ".*",
     "__TopBlocked__": ".*",
     "__YouTube__": ".*",
 }
