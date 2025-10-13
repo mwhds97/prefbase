@@ -222,13 +222,13 @@ __Domestic__
   - DIRECT
   - Proxy
 __Crack__
-# - name: Downloader
-#   type: select
-#   proxies:
-#   - DIRECT
-#   - Proxy
-#   - REJECT
-# Downloader
+- name: Downloader
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - REJECT
+__Downloader__
 - name: Special
   type: select
   proxies:
@@ -567,13 +567,13 @@ rule-providers:
     path: ./Rules/Douyin
     interval: 86400
     proxy: Proxy
-  # Downloader:
-  #   type: http
-  #   behavior: classical
-  #   url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Downloader.yaml'
-  #   path: ./Rules/Downloader
-  #   interval: 86400
-  #   proxy: Proxy
+  Downloader:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Downloader.yaml'
+    path: ./Rules/Downloader
+    interval: 86400
+    proxy: Proxy
   Drive:
     type: http
     behavior: classical
@@ -925,7 +925,7 @@ rules:
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Special,Special
-# - RULE-SET,Downloader,Downloader
+- RULE-SET,Downloader,Downloader
 # - RULE-SET,Spam,Spam
 - RULE-SET,AISuite,AISuite
 - RULE-SET,Apple,Apple
@@ -1004,7 +1004,7 @@ script:
             "Direct": "DIRECT",
             "Proxy": "Proxy",
             "Special": "Special",
-            # "Downloader": "Downloader",
+            "Downloader": "Downloader",
             # "Spam": "Spam",
             "AISuite": "AISuite",
             "Apple": "Apple",
