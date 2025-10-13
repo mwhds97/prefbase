@@ -215,13 +215,13 @@ __Domestic__
 #   - DIRECT
 #   - Proxy
 # Spam
-# - name: Crack
-#   type: select
-#   proxies:
-#   - REJECT
-#   - DIRECT
-#   - Proxy
-# Crack
+- name: Crack
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+  - Proxy
+__Crack__
 # - name: Downloader
 #   type: select
 #   proxies:
@@ -306,6 +306,13 @@ __PayPal__
   - DIRECT
   - REJECT
 __PT__
+- name: RustDesk
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - REJECT
+__RustDesk__
 - name: Scholar
   type: select
   proxies:
@@ -490,13 +497,13 @@ rule-providers:
     path: ./Rules/Blizzard
     interval: 86400
     proxy: Proxy
-  # Crack:
-  #   type: http
-  #   behavior: classical
-  #   url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Crack.yaml'
-  #   path: ./Rules/Crack
-  #   interval: 86400
-  #   proxy: Proxy
+  Crack:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Crack.yaml'
+    path: ./Rules/Crack
+    interval: 86400
+    proxy: Proxy
   Crypto:
     type: http
     behavior: classical
@@ -784,6 +791,13 @@ rule-providers:
     path: ./Rules/Reject
     interval: 86400
     proxy: Proxy
+  RustDesk:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/RustDesk.yaml'
+    path: ./Rules/RustDesk
+    interval: 86400
+    proxy: Proxy
   Scholar:
     type: http
     behavior: classical
@@ -906,7 +920,7 @@ rule-providers:
 
 rules:
 - RULE-SET,Reject,REJECT
-# - RULE-SET,Crack,Crack
+- RULE-SET,Crack,Crack
 - RULE-SET,SSH,SSH
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Proxy,Proxy
@@ -923,6 +937,7 @@ rules:
 - RULE-SET,miHoYo,miHoYo
 - RULE-SET,PayPal,PayPal
 - RULE-SET,PT,PT
+- RULE-SET,RustDesk,RustDesk
 - RULE-SET,Scholar,Scholar
 - RULE-SET,Speedtest,Speedtest
 - RULE-SET,Steam,Steam
@@ -984,7 +999,7 @@ script:
     def main(ctx, metadata):
         ruleset_action = {
             "Reject": "REJECT",
-            # "Crack": "Crack",
+            "Crack": "Crack",
             "SSH": "SSH",
             "Direct": "DIRECT",
             "Proxy": "Proxy",
@@ -1001,6 +1016,7 @@ script:
             "miHoYo": "miHoYo",
             "PayPal": "PayPal",
             "PT": "PT",
+            "RustDesk": "RustDesk",
             "Scholar": "Scholar",
             "Speedtest": "Speedtest",
             "Steam": "Steam",

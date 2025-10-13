@@ -62,6 +62,7 @@ FILTERS = {
     "__PayPal__": ".*",
     "__Proxy__": ".*",
     "__PT__": ".*",
+    "__RustDesk__": ".*",
     "__Scholar__": ".*",
     "__Spam__": ".*",
     "__Special__": ".*",
