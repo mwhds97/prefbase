@@ -131,6 +131,7 @@ dns:
   - y.qq.com
   use-hosts: false
   use-system-hosts: true
+  respect-rules: false
   default-nameserver:
   - system
   nameserver:
