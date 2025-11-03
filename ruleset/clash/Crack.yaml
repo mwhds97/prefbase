@@ -1,4 +1,6 @@
 payload:
+- DOMAIN-SUFFIX,adobe.io
+- DOMAIN-SUFFIX,adobestats.io
 - PROCESS-NAME,3d toolkit.exe
 - PROCESS-NAME,acrobat.exe
 - PROCESS-NAME,acrobat.com.exe
