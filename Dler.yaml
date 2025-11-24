@@ -185,6 +185,14 @@ geox-url:
   geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
   mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
   asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
+listeners:
+- name: ss-in
+  type: shadowsocks
+  port: 7895
+  listen: "::"
+  cipher: aes-256-gcm
+  password: duniangwqnmlgb
+  udp: true
 
 __nodes__
 
