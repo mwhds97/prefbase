@@ -1,4 +1,5 @@
 payload:
+- AND,((PROCESS-NAME,RustDesk.exe),(NETWORK,TCP),(DST-PORT,21114))
 - DOMAIN-SUFFIX,appcloud2.in.zhihu.com
 - DOMAIN-SUFFIX,mqtt.zhihu.com
 - DOMAIN-SUFFIX,sugar.zhihu.com
