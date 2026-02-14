@@ -38,7 +38,7 @@ tun:
   - any:53
   route-exclude-address: []
   mtu: 9000
-  strict-route: false
+  strict-route: true
   disable-icmp-forwarding: false
 dns:
   enable: true
