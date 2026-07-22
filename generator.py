@@ -26,10 +26,11 @@ def level_region(node):
 
 def level_type(node):
     LEVELS = {
-        " IEPL.*IX": 4,
-        " IEPL.*AC": 3,
-        " IEPL.*Pre": 2,
-        " IEPL.*": 1,
+        " GIA": 5,
+        " Fusion.*Pre": 4,
+        " Fusion.*Adv": 3,
+        " Fusion.*": 2,
+        " CIA": 1,
     }
     info = node if isinstance(node, str) else node["name"]
     for l in LEVELS:
@@ -40,6 +41,7 @@ def level_type(node):
 
 FILTERS = {
     "__AISuite__": ".*",
+    "__APNS__": ".*",
     "__Apple__": ".*",
     "__Blizzard__": ".*",
     "__Crack__": ".*",
@@ -97,7 +99,7 @@ for f in FILTERS:
         if re.search(FILTERS[f], p["name"]) is not None:
             clash_remarks[f] += "  - " + p["name"] + "\n"
     clash_remarks[f] = clash_remarks[f].rstrip()
-with open("Dler.yaml", "r+", encoding="utf-8", newline="\n") as f:
+with open("mihomo.yaml", "r+", encoding="utf-8", newline="\n") as f:
     clash_conf = f.read()
     clash_conf = clash_conf.replace("__nodes__", clash_nodes)
     for r in clash_remarks:
@@ -120,7 +122,7 @@ for f in FILTERS:
     for l in surge_list:
         if re.search(FILTERS[f], l) is not None:
             surge_remarks[f] += "," + re.match(r"^(.*?) =", l).group(1)
-with open("Dler.conf", "r+", encoding="utf-8", newline="\n") as f:
+with open("surge.conf", "r+", encoding="utf-8", newline="\n") as f:
     surge_conf = f.read()
     surge_conf = surge_conf.replace("__nodes__", surge_nodes)
     for r in surge_remarks:

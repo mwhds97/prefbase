@@ -159,8 +159,6 @@ sniffer:
       ports:
       - 443
       - 8443
-  skip-domain:
-  - +.push.apple.com
   skip-dst-address:
   - 91.105.192.0/23
   - 91.108.4.0/22
@@ -185,6 +183,14 @@ geox-url:
   geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
   mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
   asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
+listeners:
+- name: snell-in
+  type: snell
+  port: 7895
+  listen: "::"
+  psk: __PSK__
+  version: 4
+  udp: true
 
 __nodes__
 
@@ -244,6 +250,13 @@ __Special__
   - DIRECT
   - REJECT
 __AISuite__
+- name: APNS
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__APNS__
 - name: Apple
   type: select
   proxies:
@@ -412,6 +425,15 @@ __GlobalTV__
   - DIRECT
   - REJECT
 __Others__
+- name: APNS-fallback
+  type: fallback
+  proxies:
+  - APNS
+  - DIRECT
+  url: captive.apple.com/generate_204
+  interval: 60
+
+
 
 rule-providers:
   ABC:
@@ -440,6 +462,13 @@ rule-providers:
     behavior: classical
     url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Amazon.yaml'
     path: ./Rules/Media/Amazon
+    interval: 86400
+    proxy: Proxy
+  APNS:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/meta/apns.list'
+    path: ./Rules/APNS
     interval: 86400
     proxy: Proxy
   Apple:
@@ -929,6 +958,7 @@ rules:
 - RULE-SET,Downloader,Downloader
 # - RULE-SET,Spam,Spam
 - RULE-SET,AISuite,AISuite
+- RULE-SET,APNS,APNS-fallback
 - RULE-SET,Apple,Apple
 - RULE-SET,Blizzard,Blizzard
 - RULE-SET,Crypto,Crypto
@@ -994,126 +1024,3 @@ rules:
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,Domestic
 - MATCH,Others
-
-script:
-  code: |
-    def main(ctx, metadata):
-        ruleset_action = {
-            "Reject": "REJECT",
-            "Crack": "Crack",
-            "SSH": "SSH",
-            "Direct": "DIRECT",
-            "Proxy": "Proxy",
-            "Special": "Special",
-            "Downloader": "Downloader",
-            # "Spam": "Spam",
-            "AISuite": "AISuite",
-            "Apple": "Apple",
-            "Blizzard": "Blizzard",
-            "Crypto": "Crypto",
-            "Discord": "Discord",
-            "Drive": "Drive",
-            "Microsoft": "Microsoft",
-            "miHoYo": "miHoYo",
-            "PayPal": "PayPal",
-            "PT": "PT",
-            "RustDesk": "RustDesk",
-            "Scholar": "Scholar",
-            "Speedtest": "Speedtest",
-            "Steam": "Steam",
-            "Telegram": "Telegram",
-            "Disney Plus": "Disney",
-            "Douyin": "Douyin",
-            "Netflix": "Netflix",
-            "Spotify": "Spotify",
-            "TikTok": "TikTok",
-            "YouTube": "YouTube",
-            "YouTube Music": "YouTube",
-            "Bilibili": "DomesticTV",
-            "IQ": "DomesticTV",
-            "IQIYI": "DomesticTV",
-            "Letv": "DomesticTV",
-            # "MOO": "DomesticTV",
-            "Netease Music": "DomesticTV",
-            "Tencent Video": "DomesticTV",
-            "WeTV": "DomesticTV",
-            "Youku": "DomesticTV",
-            "ABC": "GlobalTV",
-            "Abema TV": "GlobalTV",
-            "Amazon": "GlobalTV",
-            "Apple Music": "GlobalTV",
-            "Apple News": "GlobalTV",
-            "Apple TV": "GlobalTV",
-            "Bahamut": "GlobalTV",
-            "BBC iPlayer": "GlobalTV",
-            "DAZN": "GlobalTV",
-            "Discovery Plus": "GlobalTV",
-            "DMM": "GlobalTV",
-            "encoreTVB": "GlobalTV",
-            "F1 TV": "GlobalTV",
-            "Fox Now": "GlobalTV",
-            "Fox+": "GlobalTV",
-            "Hulu": "GlobalTV",
-            "Hulu Japan": "GlobalTV",
-            "Japonx": "GlobalTV",
-            "JOOX": "GlobalTV",
-            "KKBOX": "GlobalTV",
-            "KKTV": "GlobalTV",
-            "Line TV": "GlobalTV",
-            "Max": "GlobalTV",
-            "myTV SUPER": "GlobalTV",
-            "Niconico": "GlobalTV",
-            "Pandora": "GlobalTV",
-            "PBS": "GlobalTV",
-            "Pornhub": "GlobalTV",
-            "Soundcloud": "GlobalTV",
-            "ViuTV": "GlobalTV",
-            "TopBlocked": "TopBlocked",
-            "Domestic": "Domestic",
-            "LAN": "DIRECT",
-        }
-        port_list = [
-            "21",
-            "22",
-            "23",
-            "53",
-            "80",
-            "123",
-            "143",
-            "194",
-            "443",
-            "465",
-            "587",
-            "853",
-            "993",
-            "995",
-            "998",
-            "2052",
-            "2053",
-            "2082",
-            "2083",
-            "2086",
-            "2095",
-            "2096",
-            "5222",
-            "5228",
-            "5229",
-            "5230",
-            "8080",
-            "8443",
-            "8880",
-            "8888",
-            "8889",
-        ]
-        # if metadata["dst_port"] not in port_list:
-        #   return "DIRECT"
-        if metadata["dst_ip"] == "":
-            metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
-        for ruleset in ruleset_action:
-            if ctx.rule_providers[ruleset].match(metadata):
-                return ruleset_action[ruleset]
-        if metadata["dst_ip"] != "":
-            code = ctx.geoip(metadata["dst_ip"])
-            if code == "CN":
-                return "Domestic"
-        return "Others"
