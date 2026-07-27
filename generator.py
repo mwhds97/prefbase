@@ -4,40 +4,30 @@ import re
 
 import yaml
 
+LEVELS_TYPE = {
+    "\\*": 20000,
+    "➔": 10000,
+}
 
-def level_region(node):
-    LEVELS = {
-        "香港": 9,
-        "新加坡": 8,
-        "日本": 7,
-        "德国": 6,
-        "美国": 5,
-        "台湾": 4,
-        "韩国": 3,
-        "俄罗斯": 2,
-        "英国": 1,
-    }
-    info = node if isinstance(node, str) else node["name"]
-    for l in LEVELS:
-        if re.search(l, info) is not None:
-            return LEVELS[l]
-    return 0
+LEVELS_CLASS = {
+    " GIA": 500,
+    " Fusion.*Pre": 400,
+    " Fusion.*Adv": 300,
+    " Fusion.*": 200,
+    " CIA": 100,
+}
 
-
-def level_type(node):
-    LEVELS = {
-        " GIA": 5,
-        " Fusion.*Pre": 4,
-        " Fusion.*Adv": 3,
-        " Fusion.*": 2,
-        " CIA": 1,
-    }
-    info = node if isinstance(node, str) else node["name"]
-    for l in LEVELS:
-        if re.search(l, info) is not None:
-            return LEVELS[l]
-    return 0
-
+LEVELS_REGION = {
+    "香港": 9,
+    "新加坡": 8,
+    "日本": 7,
+    "德国": 6,
+    "美国": 5,
+    "台湾": 4,
+    "韩国": 3,
+    "俄罗斯": 2,
+    "英国": 1,
+}
 
 FILTERS = {
     "__AISuite__": ".*",
@@ -76,10 +66,30 @@ FILTERS = {
     "__YouTube__": ".*",
 }
 
+
+def level(node):
+    info = node if isinstance(node, str) else node["name"]
+    for l in LEVELS_TYPE:
+        if re.search(l, info) is not None:
+            level_type = LEVELS_TYPE[l]
+            break
+        level_type = 0
+    for l in LEVELS_CLASS:
+        if re.search(l, info) is not None:
+            level_class = LEVELS_CLASS[l]
+            break
+        level_class = 0
+    for l in LEVELS_REGION:
+        if re.search(l, info) is not None:
+            level_region = LEVELS_REGION[l]
+            break
+        level_region = 0
+    return level_type + level_class + level_region
+
+
 with open("clash.list", "r", encoding="utf-8") as f:
     clash_list = yaml.load(f, yaml.CFullLoader)
-clash_list["proxies"].sort(key=level_region, reverse=True)
-clash_list["proxies"].sort(key=level_type, reverse=True)
+clash_list["proxies"].sort(key=level, reverse=True)
 clash_nodes = (
     yaml.dump(
         clash_list,
@@ -111,8 +121,7 @@ with open("mihomo.yaml", "r+", encoding="utf-8", newline="\n") as f:
 
 with open("surge.list", "r", encoding="utf-8") as f:
     surge_list = f.readlines()
-surge_list.sort(key=level_region, reverse=True)
-surge_list.sort(key=level_type, reverse=True)
+surge_list.sort(key=level, reverse=True)
 surge_nodes = ""
 for l in surge_list:
     surge_nodes += l
