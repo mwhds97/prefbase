@@ -54,6 +54,7 @@ FILTERS = {
     "__Downloader__": ".*",
     "__Drive__": ".*",
     "__GlobalTV__": ".*",
+    "__IXP__": ".*",
     "__Microsoft__": ".*",
     "__miHoYo__": ".*",
     "__Netflix__": ".*",

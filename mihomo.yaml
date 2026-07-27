@@ -292,6 +292,13 @@ __Discord__
   - DIRECT
   - REJECT
 __Drive__
+- name: IXP
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - REJECT
+__IXP__
 - name: Microsoft
   type: select
   proxies:
@@ -667,6 +674,13 @@ rule-providers:
     path: ./Rules/Media/IQIYI
     interval: 86400
     proxy: Proxy
+  IXP:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/IXP.yaml'
+    path: ./Rules/IXP
+    interval: 86400
+    proxy: Proxy
   Japonx:
     type: http
     behavior: classical
@@ -951,6 +965,7 @@ rule-providers:
 rules:
 - RULE-SET,Reject,REJECT
 - RULE-SET,Crack,Crack
+- RULE-SET,IXP,IXP
 - RULE-SET,SSH,SSH
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Proxy,Proxy
