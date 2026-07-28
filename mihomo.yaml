@@ -481,7 +481,7 @@ rule-providers:
   Apple:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Apple.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Apple.yaml'
     path: ./Rules/Apple
     interval: 86400
     proxy: Proxy
@@ -530,14 +530,14 @@ rule-providers:
   Blizzard:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Blizzard.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Blizzard.yaml'
     path: ./Rules/Blizzard
     interval: 86400
     proxy: Proxy
   Crack:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Crack.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Crack.yaml'
     path: ./Rules/Crack
     interval: 86400
     proxy: Proxy
@@ -558,7 +558,7 @@ rule-providers:
   Direct:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Direct.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Direct.yaml'
     path: ./Rules/Direct
     interval: 86400
     proxy: Proxy
@@ -607,14 +607,14 @@ rule-providers:
   Downloader:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Downloader.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Downloader.yaml'
     path: ./Rules/Downloader
     interval: 86400
     proxy: Proxy
   Drive:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Drive.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Drive.yaml'
     path: ./Rules/Drive
     interval: 86400
     proxy: Proxy
@@ -817,28 +817,28 @@ rule-providers:
   Proxy:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Proxy.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Proxy.yaml'
     path: ./Rules/Proxy
     interval: 86400
     proxy: Proxy
   PT:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/PT.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/PT.yaml'
     path: ./Rules/PT
     interval: 86400
     proxy: Proxy
   Reject:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Reject.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Reject.yaml'
     path: ./Rules/Reject
     interval: 86400
     proxy: Proxy
   RustDesk:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/RustDesk.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/RustDesk.yaml'
     path: ./Rules/RustDesk
     interval: 86400
     proxy: Proxy
@@ -866,7 +866,7 @@ rule-providers:
   Special:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Special.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Special.yaml'
     path: ./Rules/Special
     interval: 86400
     proxy: Proxy
@@ -887,14 +887,14 @@ rule-providers:
   SSH:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/SSH.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/SSH.yaml'
     path: ./Rules/SSH
     interval: 86400
     proxy: Proxy
   Steam:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/clash/Steam.yaml'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/Steam.yaml'
     path: ./Rules/Steam
     interval: 86400
     proxy: Proxy

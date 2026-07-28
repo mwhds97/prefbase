@@ -87,12 +87,12 @@ def level(node):
     return level_type + level_class + level_region
 
 
-with open("clash.list", "r", encoding="utf-8") as f:
-    clash_list = yaml.load(f, yaml.CFullLoader)
-clash_list["proxies"].sort(key=level, reverse=True)
-clash_nodes = (
+with open("mihomo.list", "r", encoding="utf-8") as f:
+    mihomo_list = yaml.load(f, yaml.CFullLoader)
+mihomo_list["proxies"].sort(key=level, reverse=True)
+mihomo_nodes = (
     yaml.dump(
-        clash_list,
+        mihomo_list,
         Dumper=yaml.CDumper,
         default_flow_style=False,
         allow_unicode=True,
@@ -103,21 +103,21 @@ clash_nodes = (
     .decode("utf-8")
     .rstrip()
 )
-clash_remarks = {}
+mihomo_remarks = {}
 for f in FILTERS:
-    clash_remarks[f] = ""
-    for p in clash_list["proxies"]:
+    mihomo_remarks[f] = ""
+    for p in mihomo_list["proxies"]:
         if re.search(FILTERS[f], p["name"]) is not None:
-            clash_remarks[f] += "  - " + p["name"] + "\n"
-    clash_remarks[f] = clash_remarks[f].rstrip()
+            mihomo_remarks[f] += "  - " + p["name"] + "\n"
+    mihomo_remarks[f] = mihomo_remarks[f].rstrip()
 with open("mihomo.yaml", "r+", encoding="utf-8", newline="\n") as f:
-    clash_conf = f.read()
-    clash_conf = clash_conf.replace("__nodes__", clash_nodes)
-    for r in clash_remarks:
-        clash_conf = clash_conf.replace(r, clash_remarks[r])
+    mihomo_conf = f.read()
+    mihomo_conf = mihomo_conf.replace("__nodes__", mihomo_nodes)
+    for r in mihomo_remarks:
+        mihomo_conf = mihomo_conf.replace(r, mihomo_remarks[r])
     f.seek(0)
     f.truncate()
-    f.write(clash_conf)
+    f.write(mihomo_conf)
 
 with open("surge.list", "r", encoding="utf-8") as f:
     surge_list = f.readlines()
