@@ -437,7 +437,8 @@ __Others__
   proxies:
   - APNS
   - DIRECT
-  url: captive.apple.com/generate_204
+  url: http://www.msftconnecttest.com/connecttest.txt
+  expected-status: 200
   interval: 60
 
 
