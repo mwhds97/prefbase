@@ -475,7 +475,7 @@ rule-providers:
   APNS:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/meta/apns.list'
+    url: 'https://raw.githubusercontent.com/mwhds97/prefbase/master/ruleset/mihomo/APNS.yaml'
     path: ./Rules/APNS
     interval: 86400
     proxy: Proxy
