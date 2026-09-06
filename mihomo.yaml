@@ -242,13 +242,6 @@ __Special__
   - DIRECT
   - REJECT
 __AISuite__
-- name: APNS
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - REJECT
-__APNS__
 - name: Apple
   type: select
   proxies:
@@ -427,13 +420,11 @@ __Others__
 - name: APNS-fallback
   type: fallback
   proxies:
-  - APNS
+__APNS__
   - DIRECT
   url: http://www.msftconnecttest.com/connecttest.txt
   expected-status: 200
   interval: 60
-
-
 
 rule-providers:
   ABC:
