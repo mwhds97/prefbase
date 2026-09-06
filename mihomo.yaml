@@ -183,14 +183,6 @@ geox-url:
   geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
   mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
   asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
-listeners:
-- name: snell-in
-  type: snell
-  port: 7895
-  listen: "::"
-  psk: __PSK__
-  version: 4
-  udp: true
 
 __nodes__
 
