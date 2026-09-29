@@ -21,5 +21,8 @@ payload:
 # - User-Agent,%E8%BF%85%E9%9B%B7
 - DOMAIN-SUFFIX,xunlei.com
 
+# > Meituan
+- DOMAIN-SUFFIX,meituan.net
+
 - DOMAIN-SUFFIX,smtp
 # - URL-REGEX,(Subject|HELO|SMTP)
