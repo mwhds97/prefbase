@@ -18,15 +18,15 @@ LEVELS_CLASS = {
 }
 
 LEVELS_REGION = {
-    "香港": 9,
-    "新加坡": 8,
-    "日本": 7,
-    "德国": 6,
-    "美国": 5,
-    "台湾": 4,
-    "韩国": 3,
-    "俄罗斯": 2,
-    "英国": 1,
+    "Hong Kong": 9,
+    "Singapore": 8,
+    "Japan": 7,
+    "Germany": 6,
+    "United States": 5,
+    "Taiwan": 4,
+    "South Korea": 3,
+    "Russia": 2,
+    "United Kingdom": 1,
 }
 
 FILTERS = {
